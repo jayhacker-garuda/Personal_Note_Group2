@@ -13,8 +13,10 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
- 
+
 </head>
+@extends('layouts.default')
+@section('content')
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
 
 <div class="min-h-screen flex items-center justify-center">
@@ -26,4 +28,5 @@
     </div>
 <script src="{{ mix('js/app.js') }}"></script>
 </body>
+@endsection
 </html>
