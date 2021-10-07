@@ -65,22 +65,16 @@
                         autocomplete="" required="">
                 </div>
                 <div class="mt-4">
-                    <label class="text-base font-medium leading-relaxed text-blueGray-700">Password</label>
-                    <input type="password" name="" id="" placeholder="Your Password" minlength="6"
-                        class="w-full px-4 py-2 mt-2 text-base text-blue-700 border-transparent rounded-lg bg-blueGray-100 ext-blue-700 focus:border-blueGray-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-                        required="">
+                    <label class="text-base font-medium leading-relaxed">Password</label>
+                    <input type="password" name="" id="" placeholder="Your Password" class="w-full px-4 py-2 mt-2 text-base text-blue-700 border-transparent rounded-lg bg-blueGray-100 ext-blue-700 focus:border-blueGray-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
                 </div>
                 <div class="mt-2 text-right">
-                    <a href="#"
-                        class="text-sm font-semibold leading-relaxed text-blueGray-700 hover:text-blue-700 focus:text-blue-700">Forgot
-                        Password?</a>
+                    <a href="#" class="text-sm font-semibold leading-relaxed text-blueGray-700 hover:text-blue-700 focus:text-blue-700">Forgot Password?</a>
                 </div>
                 <button type="submit"
                     class="block w-full px-4 py-3 mt-6 font-semibold text-white transition duration-500 ease-in-out transform rounded-lg bg-gradient-to-r from-black hover:from-black to-black focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 hover:to-black">Log
                     In</button>
             </form>
-            <p class="mt-8 text-center">Need an account? <a href="{{ route('register') }}"
-                    class="font-semibold text-blue-500 hover:text-blue-400">Sign Up</a></p>
         </div>
         </div>
     </section>
