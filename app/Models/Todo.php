@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Todo extends Model
 {
     use HasFactory;
+
+    /**
+     * @var string[]
+     */
+    protected $fillable = [
+        'user_id', 'todo', 'todo_date'
+    ];
 }
