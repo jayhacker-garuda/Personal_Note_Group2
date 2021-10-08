@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
-    public function adminLogin()
+    public function __construct()
     {
-        return view('admin.adminLogin');    
+        return $this->middleware('auth');
     }
     
     public function index()

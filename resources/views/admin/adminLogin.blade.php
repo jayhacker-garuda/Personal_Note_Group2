@@ -1,22 +1,13 @@
-@extends('layouts.default')
+@extends('layouts.adminDefault')
 
 @section('title')
-    
+
 @endsection
 
-@section('content')
+@section('admin-panel')
     <section class="flex flex-col items-center h-screen md:flex-row ">
         <div class="relative hidden w-full h-screen bg-blueGray-400 lg:block md:w-1/3 xl:w-1/3">
             <img src="https://dummyimage.com/300x600/F3F4F7/000000" alt="" class="absolute object-cover w-full h-full">
-            <div class="relative z-10 m-12 text-left">
-                <a class="flex items-center w-32 mb-4 font-medium text-blueGray-900 title-font md:mb-10">
-                    <div class="w-2 h-2 p-2 mr-2 rounded-full bg-gradient-to-tr from-gray-300 to-gray-600">
-                    </div>
-                    <h2
-                        class="text-lg font-bold tracking-tighter text-black uppercase transition duration-500 ease-in-out transform hover:text-gray-500 dark:text-gray-400">
-                        Personal Note </h2>
-                </a>
-            </div>
         </div>
         <div
             class="flex w-full h-screen px-6 bg-whitelack md:max-w-md lg:max-w-full md:mx-auto md:w-1/2 xl:w-1/3 lg:px-16 xl:px-12 items-left justify-left">
@@ -25,7 +16,7 @@
                 <div class="flex justify-enter">
                     <button type="button"
                         class="inline-flex w-full px-4 py-3 font-semibold text-black transition duration-500 ease-in-out transform bg-white border rounded-lg border-blueGray-300 hover:bg-black hover:text-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2" "="">
-                                        <div class="   flex items-center justify-center ">
+                                                <div class="     flex items-center justify-center ">
                         <svg xmlns=" http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" <svg=""
                             class="w-6 h-6" viewBox="0 0 48 48">
                             <defs>
@@ -65,10 +56,9 @@
                         autocomplete="" required="">
                 </div>
                 <div class="mt-4">
-                    <label class="text-base font-medium leading-relaxed text-blueGray-700">Password</label>
-                    <input type="password" name="" id="" placeholder="Your Password" minlength="6"
-                        class="w-full px-4 py-2 mt-2 text-base text-blue-700 border-transparent rounded-lg bg-blueGray-100 ext-blue-700 focus:border-blueGray-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-                        required="">
+                    <label class="text-base font-medium leading-relaxed">Password</label>
+                    <input type="password" name="" id="" placeholder="Your Password"
+                        class="w-full px-4 py-2 mt-2 text-base text-blue-700 border-transparent rounded-lg bg-blueGray-100 ext-blue-700 focus:border-blueGray-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
                 </div>
                 <div class="mt-2 text-right">
                     <a href="#"
@@ -79,8 +69,6 @@
                     class="block w-full px-4 py-3 mt-6 font-semibold text-white transition duration-500 ease-in-out transform rounded-lg bg-gradient-to-r from-black hover:from-black to-black focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 hover:to-black">Log
                     In</button>
             </form>
-            <p class="mt-8 text-center">Need an account? <a href="{{ route('register') }}"
-                    class="font-semibold text-blue-500 hover:text-blue-400">Sign Up</a></p>
         </div>
         </div>
     </section>

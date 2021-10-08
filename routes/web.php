@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\MainController;
@@ -31,9 +32,13 @@ Route::post('/register', [RegisterController::class, 'registerUser'])->name('aut
 
 
 // login route for admin only
-Route::get('/admin/login', [AdminController::class, 'adminLogin'])->name('admin.adminLogin');
-// Admin Dashboard
-Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+Route::get('/admin/login', [AdminLoginController::class, 'adminLogin'])->name('admin.adminLogin');
+Route::post('/admin/login', [AdminLoginController::class, 'loginAdmin'])->name('loginAdmin');
+
+Route::middleware(['user_type'])->group(function () {
+    // Admin Dashboard
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+});
 
 // User Dashboard
 Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
