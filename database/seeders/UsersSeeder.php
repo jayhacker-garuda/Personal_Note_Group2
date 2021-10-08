@@ -22,6 +22,7 @@ class UsersSeeder extends Seeder
         \App\Models\User::create([
             'name' => 'admin',
             'email' => 'adminr@admin.com',
+            'user_type' => 'admin',
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         ]);
 
