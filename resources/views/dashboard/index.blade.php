@@ -9,9 +9,15 @@
     <div class="bg-gray-400 h-full">
         <div class="py-2">
             <div class="p-2 space-x-1.5">
-                <a href="#" class="p-2 py-2 bg-white rounded">Home</a>
-                <a href="#" class="p-2 py-2 bg-white rounded">Profile</a>
-                <a href="#" class="p-2 py-2 bg-white rounded">Setting</a>
+                <a id="homeBtn" class="p-2 py-2 bg-white rounded cursor-pointer">
+                    Home
+                </a>
+                <a id="profileBtn" class="p-2 py-2 bg-white rounded cursor-pointer">
+                    Profile
+                </a>
+                <a id="settingsBtn" class="p-2 py-2 bg-white rounded cursor-pointer">
+                    Settings
+                </a>
             </div>
         </div>
             <div class="flex items-center justify-center h-screen mb-5 overflow-hidden" style="margin-top: -9%">
@@ -19,7 +25,7 @@
                     <div class="text-center">
                         <h1 class="text-white text-6xl font-bold">Welcome To Personal Notes</h1>
                         <div class="my-3"></div>
-                        <h2 class="text-white text-5xl font-bold">Rojae Henry</h2>
+                        <h2 class="text-white text-5xl font-bold">{{ Auth::user()->name }}</h2>
                     </div>
                 </div>
             </div>
@@ -40,12 +46,12 @@
 
 
         <div class="my-5 bg-gray-500"></div>
-        <div class="bg-gray-400">
+        <div id="home" class="bg-gray-400" style="display: block">
             <section class="text-gray-600 body-font">
                 <div class="container px-5 py-24 mx-auto max-w-7x1">
                     <div class="flex flex-wrap w-full mb-4 p-4">
                         <div class="w-full mb-6 lg:mb-0">
-                            <h1 class="sm:text-4xl text-5xl font-medium font-bold title-font mb-2 text-gray-900">To Do List</h1>
+                            <h1 class="sm:text-4xl text-5xl font-bold title-font mb-2 text-gray-900">To Do List</h1>
                             <div class="h-1 w-20 bg-indigo-500 rounded"></div>
 
                         </div>
@@ -293,6 +299,17 @@
                 </div>
             </section>
         </div>
+        <div id="profile" style="display: none">
+            <!-- Profile Display -->
+            <h1>Showayne Anderson</h1>
+        </div>
+        <div id="settings" style="display: none">
+            <!-- Settings Display -->
+            <h1>Rojae Anderson</h1>
+        </div>
     </div>
     </body>
+@endsection
+@section('js')
+    <script src="{{ asset('js/Dashboard/toggle.js') }}"></script>
 @endsection
