@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\UserDashboardController;
@@ -42,3 +43,7 @@ Route::middleware(['user_type'])->group(function () {
 
 // User Dashboard
 Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
+
+
+// Logout User
+Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
