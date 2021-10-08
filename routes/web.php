@@ -24,13 +24,14 @@ Route::get('/', [MainController::class, 'index'])->name('main.index');
 Route::get('/contact-us', [MainController::class, 'contact'])->name('main.contact');
 
 // Auth
-Route::get('/login', [LoginController::class, 'login'])->name('auth.login');
+Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/login', [LoginController::class, 'loginUser'])->name('auth.loginUser');
-Route::get('/register', [RegisterController::class, 'register'])->name('auth.register');
+Route::get('/register', [RegisterController::class, 'register'])->name('register');
 Route::post('/register', [RegisterController::class, 'registerUser'])->name('auth.saveUser');
 
 
-
+// login route for admin only
+Route::get('/admin/login', [AdminController::class, 'adminLogin'])->name('admin.adminLogin');
 // Admin Dashboard
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
 

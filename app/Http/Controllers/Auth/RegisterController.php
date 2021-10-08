@@ -17,6 +17,6 @@ class RegisterController extends Controller
     {
         $request->validate([]);
 
-        return redirect()->route('auth.login')->with('success', '🤘🏾💀🤘🏾');
+        return redirect()->route('login')->with('success', '🤘🏾💀🤘🏾');
     }
 }
