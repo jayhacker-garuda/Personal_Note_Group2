@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class UserDashboardController extends Controller
 {
+    public function __construct()
+    {
+        return $this->middleware('auth');
+    }
     public function index()
     {
         return view('dashboard.index');

@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\UserDashboardController;
@@ -24,15 +26,24 @@ Route::get('/', [MainController::class, 'index'])->name('main.index');
 Route::get('/contact-us', [MainController::class, 'contact'])->name('main.contact');
 
 // Auth
-Route::get('/login', [LoginController::class, 'login'])->name('auth.login');
+Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/login', [LoginController::class, 'loginUser'])->name('auth.loginUser');
-Route::get('/register', [RegisterController::class, 'register'])->name('auth.register');
+Route::get('/register', [RegisterController::class, 'register'])->name('register');
 Route::post('/register', [RegisterController::class, 'registerUser'])->name('auth.saveUser');
 
 
+// login route for admin only
+Route::get('/admin/login', [AdminLoginController::class, 'adminLogin'])->name('admin.adminLogin');
+Route::post('/admin/login', [AdminLoginController::class, 'loginAdmin'])->name('loginAdmin');
 
-// Admin Dashboard
-Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+Route::middleware(['user_type'])->group(function () {
+    // Admin Dashboard
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+});
 
 // User Dashboard
 Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
+
+
+// Logout User
+Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
