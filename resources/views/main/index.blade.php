@@ -17,19 +17,16 @@
 </head>
 @extends('layouts.default')
 @section('content')
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
-=======
 
 <body class="bg-gray-100 h-screen">
 {{--<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">--}}
 {{--<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">--}}
->>>>>>> 5d893577924e8b1bc8355a90da048f331eb6f8d4
-=======
+
 
 <body class="bg-gray-100 h-screen">
->>>>>>> 2c8017bde446176cd7743c54504a654d50f568f7
 
 
 <section class="relative  bg-blueGray-50">
