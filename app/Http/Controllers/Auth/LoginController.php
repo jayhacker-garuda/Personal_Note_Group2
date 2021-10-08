@@ -12,6 +12,14 @@ class LoginController extends Controller
     {
         return view('auth.login');
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+
+>>>>>>> 5d893577924e8b1bc8355a90da048f331eb6f8d4
+=======
 
     public function loginUser(Request $request)
     {
@@ -36,3 +44,4 @@ class LoginController extends Controller
         }
     }
 }
+>>>>>>> 2c8017bde446176cd7743c54504a654d50f568f7
