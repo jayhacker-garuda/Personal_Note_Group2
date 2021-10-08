@@ -42,7 +42,7 @@
                 </div>
                 </form>
                 <p class="mt-2"> Dont have an account? <span class="cursor-pointer text-sm text-blue-600"> <a
-                            href="{{ route('auth.register') }}">Sign Up now</a></span></p>
+                            href="{{ route('register') }}">Sign Up now</a></span></p>
             </div>
         </div>
     </div>

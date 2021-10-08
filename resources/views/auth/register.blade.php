@@ -37,7 +37,7 @@
                     <input type="password" class="block w-full p-2 border rounded border-gray-300 focus:ring-1 focus:ring-gray-400 focus:border-transparent  " placeholder="Confirm Password">
                 </div>
 
-                <div class="mt-6 block p-5 text-sm md:font-sans text-xs text-gray-800">
+                <div class="mt-6 block p-5 md:font-sans text-xs text-gray-800">
                     <input type="checkbox" class="inline-block border-0  ">
                     <span display="inline" class="">By creating an account you are agreeing to our
                         <a class="" href="#" target="_blank" data-test="Link">
@@ -51,7 +51,7 @@
                     <input type="submit" value="Sign up " class="py-3 bg-green-500 text-white w-full rounded hover:bg-green-600">
                 </div>
             </form>
-            <a class="" href="{{ route('auth.login') }}" data-test="Link"><span class="block  p-5 text-center text-gray-800  text-xs ">Already have an account?</span></a>
+            <a class="" href="{{ route('login') }}" data-test="Link"><span class="block  p-5 text-center text-gray-800  text-xs ">Already have an account?</span></a>
         </div>
 
 
