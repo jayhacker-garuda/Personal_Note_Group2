@@ -18,7 +18,7 @@
 <body class="bg-gray-600 h-screen antialiased leading-none font-sans">
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 <div class="">
-    <div class="antialiased bg-green-500 dark-mode:bg-gray-900">
+    <div class="antialiased bg-green-500 dark-mode:bg-gray-900 z-10 w-screen fixed">
         <div class="w-full text-gray-700 bg-dark dark-mode:text-gray-200 dark-mode:bg-gray-800">
             <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                 <div class="flex flex-row items-center justify-between p-4">
