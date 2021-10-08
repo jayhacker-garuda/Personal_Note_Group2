@@ -26,7 +26,7 @@ class AdminLoginController extends Controller
 
             if (Auth::user()->user_type === 'admin') {
 
-                return redirect()->route('admin.index');
+                return redirect()->route('admin.index')->with('success', '.....');
             } else {
                 return redirect()->route('admin.adminLogin')->with('error', '❌❌❌');
             }
