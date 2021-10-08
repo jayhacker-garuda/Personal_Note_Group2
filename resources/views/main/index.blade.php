@@ -18,6 +18,7 @@
 @extends('layouts.default')
 @section('content')
 <<<<<<< HEAD
+<<<<<<< HEAD
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
 =======
 
@@ -25,6 +26,10 @@
 {{--<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">--}}
 {{--<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">--}}
 >>>>>>> 5d893577924e8b1bc8355a90da048f331eb6f8d4
+=======
+
+<body class="bg-gray-100 h-screen">
+>>>>>>> 2c8017bde446176cd7743c54504a654d50f568f7
 
 
 <section class="relative  bg-blueGray-50">
@@ -67,8 +72,8 @@
                             </div>
                             <h6 class="text-xl font-semibold">Lorem ipsum dolor sit amet</h6>
                             <p class="mt-2 mb-4 text-blueGray-500">
-                               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Accusamus delectus dolorum molestiae quia quibusdam quisquam tempore temporibus vel veniam!
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                     </div>
@@ -81,8 +86,8 @@
                             </div>
                             <h6 class="text-xl font-semibold">Lorem ipsum dolor sit amet</h6>
                             <p class="mt-2 mb-4 text-blueGray-500">
-                                Keep you user engaged by providing meaningful information.
-                                Remember that by this time, the user is curious.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                     </div>
@@ -141,6 +146,18 @@
             <img src="https://evernote.com/c/assets/homepage-repackaging/clip_the_web__en.png?117a41cc66580358" alt="">
         </div>
     </div>
+    <div class="my-20"></div>
+    <div class="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-4 flex items-center justify-center">
+        <div class="lg:w-3/6 lg:pr-0 bg-gray-50 pr-0 p-8 rounded-md">
+            <img src="https://evernote.com/c/assets/homepage-repackaging/clip_the_web__en.png?117a41cc66580358" alt="">
+        </div>
+        <div class="lg:w-3/6 xl:w-2/5 md:w-full flex flex-col lg:ml-auto w-full mt-10 lg:mt-0 ">
+            <h1 class="font-medium text-5xl text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+            <p class="leading-relaxed mt-4 text-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
 </section>
 
 
@@ -150,19 +167,19 @@
 
 
 
-<div class="flex flex-wrap items-center justify-center" style="margin-top: -10%">
-    <div class="rounded-2xl bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 w-auto text-center text-white p-8 ">
-        <h1 class="text-2xl ">View others post</h1>
-        <div class="my-5"></div>
-        <a href="" class="items-center w-3/12 mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">View</a>
-    </div>
-    <div class="mx-10"></div>
-    <div class="rounded-2xl bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 w-auto text-center text-white p-8 ">
-        <h1 class="text-2xl ">Create a post</h1>
-        <div class="my-5"></div>
-        <a href="" class="items-center w-3/12 mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">View</a>
-    </div>
-</div>
+{{--<div class="flex flex-wrap items-center justify-center" style="margin-top: -10%">--}}
+{{--    <div class="rounded-2xl bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 w-auto text-center text-white p-8 ">--}}
+{{--        <h1 class="text-2xl ">View others post</h1>--}}
+{{--        <div class="my-5"></div>--}}
+{{--        <a href="" class="items-center w-3/12 mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">View</a>--}}
+{{--    </div>--}}
+{{--    <div class="mx-10"></div>--}}
+{{--    <div class="rounded-2xl bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 w-auto text-center text-white p-8 ">--}}
+{{--        <h1 class="text-2xl ">Create a post</h1>--}}
+{{--        <div class="my-5"></div>--}}
+{{--        <a href="" class="items-center w-3/12 mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">View</a>--}}
+{{--    </div>--}}
+{{--</div>--}}
 
 
 <script src="{{ mix('js/app.js') }}"></script>

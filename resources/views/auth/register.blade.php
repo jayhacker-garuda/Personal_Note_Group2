@@ -21,23 +21,44 @@
                 <h1 class=" text-gray-800 text-3xl font-medium text-center">Create an account for free</h1>
 {{--                <h3 class="p-1 text-gray-700">Free forever. No payment needed.</h3>--}}
             </div>
-            <form action="#" class="p-0">
+            <form action="{{ route('auth.saveUser') }}" method="POST" class="p-0">
+                @csrf
                 <div class="mt-5">
 
                     <!-- <label for="email" class="sc-bqyKva ePvcBv">Email</label> -->
-                    <input type="text" class="block w-full p-2 border rounded border-gray-300  focus:ring-1 focus:ring-gray-400 focus:border-transparent " placeholder="Email">
+                    <input type="email" name="email" class="block w-full p-2 border rounded border-gray-300  focus:ring-1 focus:ring-gray-400 focus:border-transparent" value="{{ old('email') }}" placeholder="Email">
+                    @error('email')
+                        <span class="text-red-400 ml-2">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
                 <div class="mt-5">
-                    <input type="text" class="block w-full p-2 border rounded border-gray-300  focus:ring-1 focus:ring-gray-400 focus:border-transparent " placeholder="User-name">
+                    <input type="text" name="name" class="block w-full p-2 border rounded border-gray-300  focus:ring-1 focus:ring-gray-400 focus:border-transparent" value="{{ old('name') }}" placeholder="Name">
+                    @error('name')
+                        <span class="text-red-400 ml-2">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
                 <div class="mt-5">
-                    <input type="password" class="block w-full p-2 border rounded border-gray-300 focus:ring-1 focus:ring-gray-400 focus:border-transparent  " placeholder="Password">
+                    <input type="password" name="password" class="block w-full p-2 border rounded border-gray-300 focus:ring-1 focus:ring-gray-400 focus:border-transparent" placeholder="Password">
+                    @error('password')
+                        <span class="text-red-400 ml-2">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
                 <div class="mt-5">
-                    <input type="password" class="block w-full p-2 border rounded border-gray-300 focus:ring-1 focus:ring-gray-400 focus:border-transparent  " placeholder="Confirm Password">
+                    <input type="password" name="confirm-password" class="block w-full p-2 border rounded border-gray-300 focus:ring-1 focus:ring-gray-400 focus:border-transparent" placeholder="Confirm Password">
+                    @error('confirm-password')
+                        <span class="text-red-400 ml-2">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
 
-                <div class="mt-6 block p-5 text-sm md:font-sans text-xs text-gray-800">
+                <div class="mt-6 block p-5 md:font-sans text-xs text-gray-800">
                     <input type="checkbox" class="inline-block border-0  ">
                     <span display="inline" class="">By creating an account you are agreeing to our
                         <a class="" href="#" target="_blank" data-test="Link">
@@ -51,7 +72,7 @@
                     <input type="submit" value="Sign up " class="py-3 bg-green-500 text-white w-full rounded hover:bg-green-600">
                 </div>
             </form>
-            <a class="" href="{{ route('auth.login') }}" data-test="Link"><span class="block  p-5 text-center text-gray-800  text-xs ">Already have an account?</span></a>
+            <a class="" href="{{ route('login') }}" data-test="Link"><span class="block  p-5 text-center text-gray-800  text-xs ">Already have an account?</span></a>
         </div>
 
 
