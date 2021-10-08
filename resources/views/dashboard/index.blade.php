@@ -16,7 +16,19 @@
                 </div>
             </div>
         </header>
-
+        <div class="flex flex-wrap items-center justify-center" style="margin-top: -16%">
+            <div class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
+               <h1>View others post</h1>
+                <div class="my-5"></div>
+                <a href="" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2" >view</a>
+            </div>
+            <div class="mx-10"></div>
+            <div class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
+                <h1>View others post</h1>
+                <div class="my-5"></div>
+                <a href="" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2" >view</a>
+            </div>
+        </div>
     </div>
     </body>
 @endsection
