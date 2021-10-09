@@ -18,6 +18,14 @@
 @extends('layouts.default')
 @section('content')
 
+
+<body class="bg-gray-100 h-screen antialiased leading-none font-sans">
+
+<body class="bg-gray-100 h-screen">
+{{--<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">--}}
+{{--<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">--}}
+
+
 <body class="bg-gray-100 h-screen">
 
 
