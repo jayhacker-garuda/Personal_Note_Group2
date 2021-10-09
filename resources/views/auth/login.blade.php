@@ -5,12 +5,6 @@
 @endsection
 
 @section('content')
-<<<<<<< HEAD
-<<<<<<< HEAD
-    Login
-=======
-=======
->>>>>>> 2c8017bde446176cd7743c54504a654d50f568f7
     <div class="min-h-screen bg-no-repeat bg-cover bg-fixed"
         style="background-image: url('https://www.sysmex-ap.com/new-zealand/wp-content/uploads/sites/13/2020/05/Company-Press-Release.jpg  ')">
         <div class="flex justify-end">

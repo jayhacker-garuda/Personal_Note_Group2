@@ -5,10 +5,9 @@
 @endsection
 
 @section('content')
-    <body>
     <div class="bg-gray-400 h-full">
-        <div class="py-2">
-            <div class="p-2 space-x-1.5">
+        <div class="py-2 flex">
+            <div class="p-2 space-x-1.5 mx-auto">
                 <a id="homeBtn" class="p-2 py-2 bg-white rounded cursor-pointer">
                     Home
                 </a>
@@ -293,7 +292,7 @@
             </section>
         </div>
 
-        <div id="profile" style="display: block">
+        <div id="profile" style="display: none">
 
             <!-- Profile Display -->
             <!-- component -->
@@ -331,7 +330,6 @@
             <h1>Rojae Anderson</h1>
         </div>
     </div>
-    </body>
 @endsection
 @section('js')
     <script src="{{ asset('js/Dashboard/toggle.js') }}"></script>
