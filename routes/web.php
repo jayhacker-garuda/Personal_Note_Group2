@@ -7,6 +7,11 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\UserDashboardController;
+
+use App\Http\Controllers\PersonalController;
+use App\Http\Controllers\ReminderController;
+use App\Http\Controllers\TodoController;
+
 use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
 
@@ -47,3 +52,9 @@ Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashb
 
 // Logout User
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
+
+
+// Todo, Reminder and Personal
+Route::resource('dashboard/personal', PersonalController::class);
+Route::resource('dashboard/reminder', ReminderController::class);
+Route::resource('dashboard/todo', TodoController::class);
