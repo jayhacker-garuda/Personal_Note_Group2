@@ -51,11 +51,9 @@
                 <div class="container px-5 py-24 mx-auto max-w-7x1">
                     <div class="flex flex-wrap w-full mb-4 p-4">
                         <div class="w-full mb-6 lg:mb-0">
-<<<<<<< HEAD
-                            <h1 class="sm:text-4xl text-5xl font-bold title-font mb-2 text-gray-900">To Do List</h1>
-=======
+
                             <h1 class="sm:text-4xl text-5xl font-medium  title-font mb-2 text-gray-900">To Do List</h1>
->>>>>>> Rojae-branch
+
                             <div class="h-1 w-20 bg-indigo-500 rounded"></div>
 
                         </div>
@@ -296,7 +294,9 @@
                 </div>
             </section>
         </div>
-        <div id="profile" style="display: none">
+
+        <div id="profile" style="display: block">
+
             <!-- Profile Display -->
             <!-- component -->
 <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden my-4">
@@ -335,6 +335,7 @@
         </div>
     </div>
 </div>
+
         </div>
         <div id="settings" style="display: none">
             <!-- Settings Display -->
