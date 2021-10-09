@@ -13,6 +13,12 @@ class Todo extends Model
      * @var string[]
      */
     protected $fillable = [
-        'user_id', 'todo', 'todo_date'
+        'note_category_id','user_id', 'todo', 'todo_date'
     ];
+
+
+    public function noteCategory()
+    {
+        return $this->hasMany(NoteCategory::class);
+    }
 }
