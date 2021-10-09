@@ -295,36 +295,162 @@
         <div id="profile" style="display: none">
 
             <!-- Profile Display -->
-            <!-- component -->
-<div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden my-4">
-    <img class="w-full h-56 object-cover object-center" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="avatar">
-    <div class="flex items-center px-6 py-3 bg-gray-900">
-        
-     <form action="">
-     
-        <label
-        class="w-64 flex flex-col items-center px-4 bg-white rounded-md shadow-md tracking-wide uppercase border border-blue cursor-pointer hover:bg-purple-600 hover:text-white text-purple-600 ease-linear transition-all duration-150">
-        <i class="fas fa-cloud-upload-alt fa-3x"></i>
-        <span class="mt-2 text-base leading-normal">Select a file</span>
-        <input type='file' class="hidden" />
-      </label>
-  
-    </div>
-    <div class="py-4 px-6">
-        <h1 class="text-2xl font-semibold text-gray-800">User name</h1>
-     
-        <div class="flex items-center mt-4 text-gray-700">
-            <svg class="h-6 w-6 fill-current" viewBox="0 0 512 512">
-                <path d="M437.332 80H74.668C51.199 80 32 99.198 32 122.667v266.666C32 412.802 51.199 432 74.668 432h362.664C460.801 432 480 412.802 480 389.333V122.667C480 99.198 460.801 80 437.332 80zM432 170.667L256 288 80 170.667V128l176 117.333L432 128v42.667z"/>
-            </svg>
-            <h1 class="px-2 text-sm">email@example.com</h1>
+ 
+<!-- component -->
+<style>
+    :root {
+        --main-color: #272522;
+    }
 
+    .bg-main-color {
+        background-color: var(--main-color);
+    }
+
+    .text-main-color {
+        color: var(--main-color);
+    }
+
+    .border-main-color {
+        border-color: var(--main-color);
+    }
+</style>
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+
+
+<div class="bg-gray-100">
+ <div class="w-full text-white bg-main-color">
+        <div x-data="{ open: false }"
+            class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+            <div class="p-4 flex flex-row items-center justify-between">
+                {{-- <a href="#"
+                    class="text-lg font-semibold tracking-widest uppercase rounded-lg focus:outline-none focus:shadow-outline">example
+                    profile</a> --}}
+                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open" fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path> 
+                        <path x-show="open" fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+           
         </div>
-    </form>
+    </div>
+    <!-- End of Navbar -->
+
+    <div class="container mx-auto my-5 p-5">
+        <div class="md:flex no-wrap md:-mx-2 ">
+            <!-- Left Side -->
+            <div class="w-full md:w-3/12 md:mx-2">
+                <!-- Profile Card -->
+               
+                <form method="post" enctype="multipart/form-data" id="imageChanger" action="{{ route('profile') }}">
+                    @csrf
+                    <label>
+                        <input name="profilePicture" class="hidden" id="file"
+                               type="file" {{--onchange="changeImage(event)"--}}/>
+                        <img id="output" src="{{ $User->profile_picture }}"
+                             class="mb-20 h-56 w-56 object-cover rounded-full">
+                    </label>
+                </form>
+                
+                <!-- End of profile card -->
+                <div class="my-4"></div>
+               </div>
+            <!-- Right Side -->
+            <div class="w-full md:w-9/12 mx-2 h-64">
+                <!-- Profile tab -->
+                <!-- About Section -->
+                <div class="bg-white p-3 shadow-sm rounded-sm">
+                    <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
+                        <span clas="text-green-500">
+                            <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </span>
+                        <span class="tracking-wide">About</span>
+                    </div>
+                    <div class="text-gray-700">
+                        <div class="grid md:grid-cols-2 text-sm">
+                            <div class="grid grid-cols-2">
+                                <div class="px-4 py-2 font-semibold">Name:</div>
+                                <div class="px-4 py-2">{{ Auth::user()->name }}</div>
+                            </div>
+                            <div class="text-gray-700">
+                                <div class="grid md:grid-cols-2 text-sm">
+                                    <div class="grid grid-cols-2">
+                                        <div class="px-4 py-2 font-semibold">Email:</div>
+                                        <div class="px-4 py-2">{{ Auth::user()->email }}</div>
+                                    </div>
+                           
+                            </div>
+                        </div>
+                    </div>
+                    <button 
+                        class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Edit</button>
+                </div>
+                <!-- End of about section -->
+  <!-- About edit -->
+             <!-- About Section  edit-->
+             <div class="bg-white p-3 shadow-sm hidden rounded-sm">
+                <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
+                    <span clas="text-green-500">
+                        <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                    </span>
+                    <span class="tracking-wide">About</span>
+                </div>
+                <div class="text-gray-700">
+                    <div class="grid md:grid-cols-2 text-sm">
+                        <div class="grid grid-cols-2">
+                            <div class="px-4 py-2 font-semibold">Name:</div>
+                            <div class="px-4 py-2"><input type="text" class="border"></div>
+                        </div>
+                        <div class="text-gray-700">
+                            <div class="grid md:grid-cols-2 text-sm">
+                                <div class="grid grid-cols-2">
+                                    <div class="px-4 py-2 font-semibold">Email:</div>
+                                    <div class="px-4 py-2"><input type="text" class="border"></div>
+                                </div>
+                       
+                        </div>
+                    </div>
+                </div>
+                <button 
+                    class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Edit</button>
+            </div>
+            <!-- End of about section -->
+<!-- End of about section -->
+
+                <div class="my-4"></div>
+
+                      </div>
+                <!-- End of profile tab -->
+            </div>
+        </div>
     </div>
 </div>
 
+
+
+
+ 
+</div>
+
         </div>
+
+
+
         <div id="settings" style="display: none">
             <!-- Settings Display -->
             <h1>Rojae Anderson</h1>
@@ -333,4 +459,24 @@
 @endsection
 @section('js')
     <script src="{{ asset('js/Dashboard/toggle.js') }}"></script>
+
+    <script>
+        $(document).ready(function () {
+
+let imageChangerForm = $("#imageChanger");
+
+$("#file").on('change', function (event) {
+
+    let image = $("#output")[0];
+    image.src = URL.createObjectURL(event.target.files[0]);
+
+    imageChangerForm.submit()
+
+
+
+});
+
+
+});
+    </script>
 @endsection
