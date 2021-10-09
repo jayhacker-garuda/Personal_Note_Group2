@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use Auth;
+
 
 class UserDashboardController extends Controller
 {
@@ -12,6 +15,8 @@ class UserDashboardController extends Controller
     }
     public function index()
     {
-        return view('dashboard.index');
+        $User = User::find(Auth::id())->first();
+
+        return view('dashboard.index',compact('User'));
     }
 }
