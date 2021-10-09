@@ -51,11 +51,7 @@
                 <div class="container px-5 py-24 mx-auto max-w-7x1">
                     <div class="flex flex-wrap w-full mb-4 p-4">
                         <div class="w-full mb-6 lg:mb-0">
-<<<<<<< HEAD
                             <h1 class="sm:text-4xl text-5xl font-bold title-font mb-2 text-gray-900">To Do List</h1>
-=======
-                            <h1 class="sm:text-4xl text-5xl font-medium  title-font mb-2 text-gray-900">To Do List</h1>
->>>>>>> Rojae-branch
                             <div class="h-1 w-20 bg-indigo-500 rounded"></div>
 
                         </div>
@@ -296,9 +292,39 @@
                 </div>
             </section>
         </div>
-        <div id="profile" style="display: none">
+
+        <div id="profile" style="display: block">
+
             <!-- Profile Display -->
-            <h1>Showayne Anderson</h1>
+            <!-- component -->
+<div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden my-4">
+    <img class="w-full h-56 object-cover object-center" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="avatar">
+    <div class="flex items-center px-6 py-3 bg-gray-900">
+        
+     <form action="">
+     
+        <label
+        class="w-64 flex flex-col items-center px-4 bg-white rounded-md shadow-md tracking-wide uppercase border border-blue cursor-pointer hover:bg-purple-600 hover:text-white text-purple-600 ease-linear transition-all duration-150">
+        <i class="fas fa-cloud-upload-alt fa-3x"></i>
+        <span class="mt-2 text-base leading-normal">Select a file</span>
+        <input type='file' class="hidden" />
+      </label>
+  
+    </div>
+    <div class="py-4 px-6">
+        <h1 class="text-2xl font-semibold text-gray-800">User name</h1>
+     
+        <div class="flex items-center mt-4 text-gray-700">
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 512 512">
+                <path d="M437.332 80H74.668C51.199 80 32 99.198 32 122.667v266.666C32 412.802 51.199 432 74.668 432h362.664C460.801 432 480 412.802 480 389.333V122.667C480 99.198 460.801 80 437.332 80zM432 170.667L256 288 80 170.667V128l176 117.333L432 128v42.667z"/>
+            </svg>
+            <h1 class="px-2 text-sm">email@example.com</h1>
+
+        </div>
+    </form>
+    </div>
+</div>
+
         </div>
         <div id="settings" style="display: none">
             <!-- Settings Display -->
