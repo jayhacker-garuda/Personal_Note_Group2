@@ -7,7 +7,7 @@
 @section('content')
     <div class="h-full">
         <div class="py-2 flex">
-            <div class="p-2 space-x-1.5 mx-auto">
+            <div class="p-2 space-x-1.5 mt-12">
                 <a id="homeBtn" class="p-2 py-2 bg-white rounded cursor-pointer">
                     Home
                 </a>
@@ -20,7 +20,7 @@
             </div>
         </div>
             <div class="flex items-center  justify-center h-screen mb-5 overflow-hidden bg-center bg-cover" style="margin-top: -3.5%; background-image: url(https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80)">
-                <div class=" p-8 text-2xl text-white bg-black bg-opacity-90 rounded-xl style="margin-top: -2%"">
+                <div class=" p-8 text-2xl text-white bg-black bg-opacity-90 rounded-xl" style="margin-top: -2%">
                     <div class="text-center" >
                         <h1 class="text-white text-6xl font-bold">Welcome To Personal Notes</h1>
                         <div class="my-3"></div>
@@ -267,7 +267,7 @@
         <div id="profile" style="display: none">
 
             <!-- Profile Display -->
- 
+
 
 {{-- {{-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> --}}
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -286,14 +286,14 @@
                     <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
                         <path x-show="!open" fill-rule="evenodd"
                             d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                            clip-rule="evenodd"></path> 
+                            clip-rule="evenodd"></path>
                         <path x-show="open" fill-rule="evenodd"
                             d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                             clip-rule="evenodd"></path>
                     </svg>
                 </button>
             </div>
-           
+
         </div>
     </div>
     <!-- End of Navbar -->
@@ -303,7 +303,7 @@
             <!-- Left Side -->
             <div class="w-full md:w-3/12 md:mx-2">
                 <!-- Profile Card -->
-               
+
                 <form method="post" enctype="multipart/form-data" id="imageChanger" action="{{ route('profile') }}">
                     @csrf
                     <label>
@@ -313,7 +313,7 @@
                              class="mb-20 h-56 w-56 object-cover rounded-full">
                     </label>
                 </form>
-                
+
                 <!-- End of profile card -->
                 <div class="my-4"></div>
                </div>
@@ -344,11 +344,11 @@
                                         <div class="px-4 py-2 font-semibold">Email:</div>
                                         <div class="px-4 py-2">{{ Auth::user()->email }}</div>
                                     </div>
-                           
+
                             </div>
                         </div>
                     </div>
-                    <button 
+                    <button
                         class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Edit</button>
                 </div>
                 <!-- End of about section -->
@@ -377,11 +377,11 @@
                                     <div class="px-4 py-2 font-semibold">Email:</div>
                                     <div class="px-4 py-2"><input type="text" class="border"></div>
                                 </div>
-                       
+
                         </div>
                     </div>
                 </div>
-                <button 
+                <button
                     class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Edit</button>
             </div>
             <!-- End of about section -->
@@ -399,7 +399,7 @@
 
 
 
- 
+
 </div>
 
         </div>
