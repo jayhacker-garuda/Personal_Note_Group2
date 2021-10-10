@@ -19,7 +19,7 @@ class TodoController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.todo.create');
     }
 
     /**
@@ -29,7 +29,7 @@ class TodoController extends Controller
      */
     public function create()
     {
-        return view('dashboard.todo.create');
+        
     }
 
     /**
