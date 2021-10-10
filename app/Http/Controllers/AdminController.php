@@ -16,4 +16,14 @@ class AdminController extends Controller
     {
         return view('admin.index');
     }
+
+    public function createNoteCategory()
+    {
+        return view('admin.noteCategory.create');
+    }
+
+    public function storeNoteCategory(Request $request)
+    {   
+        
+    }
 }
