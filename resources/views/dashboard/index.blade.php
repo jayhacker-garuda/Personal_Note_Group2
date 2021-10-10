@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="bg-gray-400 h-full">
+    <div class="h-full">
         <div class="py-2 flex">
             <div class="p-2 space-x-1.5 mx-auto">
                 <a id="homeBtn" class="p-2 py-2 bg-white rounded cursor-pointer">
@@ -62,8 +62,6 @@
                     <div class="flex flex-wrap -m-4">
                         <div class="xl:w-1/3 md:w-1/2 p-4">
                             <div class="bg-white p-6 rounded-lg">
-    {{--                            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72  rounded w-full object-cover object-center mb-6" src="https://cdn.seeklearning.com.au/media/images/career-guide/module/information-technology-technician-module.jpg" alt="Image Size 720x400">--}}
-    {{--                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Course</h3>--}}
                                 <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian</h2>
                                 <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                                 <div class="my-5 space-x-1.5">
@@ -74,8 +72,6 @@
                         </div>
                         <div class="xl:w-1/3 md:w-1/2 p-4">
                             <div class="bg-white p-6 rounded-lg">
-    {{--                            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://entrepreneurhandbook.co.uk/wp-content/uploads/2014/11/Smiling-customer-service-representative.jpg.webp" alt="Image Size 720x400">--}}
-    {{--                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Course</h3>--}}
                                 <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian</h2>
                                 <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                                 <div class="my-5 space-x-1.5">
@@ -86,8 +82,6 @@
                         </div>
                         <div class="xl:w-1/3 md:w-1/2 p-4">
                             <div class="bg-white p-6 rounded-lg">
-    {{--                            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://www.careermatch.com/job-prep/wp-content/uploads/sites/2/2018/09/administrative-assistant.jpg" alt="Image Size 720x400">--}}
-    {{--                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Course</h3>--}}
                                 <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian </h2>
                                 <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                                 <div class="my-5 space-x-1.5">
@@ -98,8 +92,6 @@
                         </div>
                         <div class="xl:w-1/3 md:w-1/2 p-4">
                             <div class="bg-white p-6 rounded-lg">
-    {{--                            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://futurecio.tech/wp-content/uploads/2020/09/pexels-photo-3840870.jpeg " alt="Image Size 720x400">--}}
-    {{--                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Course</h3>--}}
                                 <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian</h2>
                                 <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                                 <div class="my-5 space-x-1.5">
@@ -110,8 +102,6 @@
                         </div>
                         <div class="xl:w-1/3 md:w-1/2 p-4">
                             <div class="bg-white p-6 rounded-lg">
-    {{--                            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://academics.lmu.edu/media/lmuacademics/extension/images/full-stack-developer.jpg " alt="Image Size 720x400">--}}
-    {{--                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Course</h3>--}}
                                 <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian</h2>
                                 <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                                 <div class="my-5 space-x-1.5">
@@ -122,8 +112,6 @@
                         </div>
                         <div class="xl:w-1/3 md:w-1/2 p-4">
                             <div class="bg-white p-6 rounded-lg">
-    {{--                            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://www.manateetech.edu/wp-content/uploads/2017/05/IMG_7393-e1495565046548.jpg " alt="Image Size 720x400">--}}
-    {{--                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Course</h3>--}}
                                 <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian</h2>
                                 <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                                 <div class="my-5 space-x-1.5">
@@ -145,8 +133,6 @@
                     <div class="flex flex-wrap -m-4">
                         <div class="xl:w-1/3 md:w-1/2 p-4">
                             <div class="bg-white p-6 rounded-lg">
-                                {{--                            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72  rounded w-full object-cover object-center mb-6" src="https://cdn.seeklearning.com.au/media/images/career-guide/module/information-technology-technician-module.jpg" alt="Image Size 720x400">--}}
-                                {{--                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Course</h3>--}}
                                 <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian</h2>
                                 <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                                 <div class="my-5 space-x-1.5">
@@ -157,8 +143,6 @@
                         </div>
                         <div class="xl:w-1/3 md:w-1/2 p-4">
                             <div class="bg-white p-6 rounded-lg">
-                                {{--                            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://entrepreneurhandbook.co.uk/wp-content/uploads/2014/11/Smiling-customer-service-representative.jpg.webp" alt="Image Size 720x400">--}}
-                                {{--                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Course</h3>--}}
                                 <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian</h2>
                                 <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                                 <div class="my-5 space-x-1.5">
@@ -169,8 +153,6 @@
                         </div>
                         <div class="xl:w-1/3 md:w-1/2 p-4">
                             <div class="bg-white p-6 rounded-lg">
-                                {{--                            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://www.careermatch.com/job-prep/wp-content/uploads/sites/2/2018/09/administrative-assistant.jpg" alt="Image Size 720x400">--}}
-                                {{--                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Course</h3>--}}
                                 <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian </h2>
                                 <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                                 <div class="my-5 space-x-1.5">
@@ -233,8 +215,6 @@
                         </div>
                         <div class="xl:w-1/3 md:w-1/2 p-4">
                             <div class="bg-white p-6 rounded-lg">
-                                {{--                            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://entrepreneurhandbook.co.uk/wp-content/uploads/2014/11/Smiling-customer-service-representative.jpg.webp" alt="Image Size 720x400">--}}
-                                {{--                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Course</h3>--}}
                                 <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian</h2>
                                 <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                                 <div class="my-5 space-x-1.5">
@@ -245,8 +225,6 @@
                         </div>
                         <div class="xl:w-1/3 md:w-1/2 p-4">
                             <div class="bg-white p-6 rounded-lg">
-                                {{--                            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://www.careermatch.com/job-prep/wp-content/uploads/sites/2/2018/09/administrative-assistant.jpg" alt="Image Size 720x400">--}}
-                                {{--                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Course</h3>--}}
                                 <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian </h2>
                                 <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                                 <div class="my-5 space-x-1.5">
@@ -257,8 +235,6 @@
                         </div>
                         <div class="xl:w-1/3 md:w-1/2 p-4">
                             <div class="bg-white p-6 rounded-lg">
-                                {{--                            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://futurecio.tech/wp-content/uploads/2020/09/pexels-photo-3840870.jpeg " alt="Image Size 720x400">--}}
-                                {{--                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Course</h3>--}}
                                 <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian</h2>
                                 <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                                 <div class="my-5 space-x-1.5">
@@ -269,8 +245,6 @@
                         </div>
                         <div class="xl:w-1/3 md:w-1/2 p-4">
                             <div class="bg-white p-6 rounded-lg">
-                                {{--                            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://academics.lmu.edu/media/lmuacademics/extension/images/full-stack-developer.jpg " alt="Image Size 720x400">--}}
-                                {{--                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Course</h3>--}}
                                 <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian</h2>
                                 <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                                 <div class="my-5 space-x-1.5">
@@ -281,8 +255,6 @@
                         </div>
                         <div class="xl:w-1/3 md:w-1/2 p-4">
                             <div class="bg-white p-6 rounded-lg">
-                                {{--                            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://www.manateetech.edu/wp-content/uploads/2017/05/IMG_7393-e1495565046548.jpg " alt="Image Size 720x400">--}}
-                                {{--                            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Course</h3>--}}
                                 <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian</h2>
                                 <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                                 <div class="my-5 space-x-1.5">
@@ -300,31 +272,14 @@
 
             <!-- Profile Display -->
  
-<!-- component -->
-<style>
-    :root {
-        --main-color: #272522;
-    }
 
-    .bg-main-color {
-        background-color: var(--main-color);
-    }
-
-    .text-main-color {
-        color: var(--main-color);
-    }
-
-    .border-main-color {
-        border-color: var(--main-color);
-    }
-</style>
-<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+{{-- {{-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> --}}
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
 
 
-<div class="bg-gray-100">
- <div class="w-full text-white bg-main-color">
+<div class="">
+ <div class="w-full text-white">
         <div x-data="{ open: false }"
             class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
             <div class="p-4 flex flex-row items-center justify-between">
@@ -403,7 +358,7 @@
                 <!-- End of about section -->
   <!-- About edit -->
              <!-- About Section  edit-->
-             <div class="bg-white p-3 shadow-sm hidden rounded-sm">
+             <div class="p-3 shadow-sm rounded-sm" style="display: none">
                 <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
                     <span clas="text-green-500">
                         <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -460,6 +415,26 @@
             <h1>Rojae Anderson</h1>
         </div>
     </div>
+@endsection
+@section('css')
+    <!-- component -->
+{{-- <style>
+    :root {
+        --main-color: #585858;
+    }
+
+    .bg-main-color {
+        background-color: var(--main-color);
+    }
+
+    .text-main-color {
+        color: var(--main-color);
+    }
+
+    .border-main-color {
+        border-color: var(--main-color);
+    }
+</style> --}}
 @endsection
 @section('js')
     <script src="{{ asset('js/Dashboard/toggle.js') }}"></script>
