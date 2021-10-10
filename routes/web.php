@@ -56,5 +56,5 @@ Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 // Todo, Reminder and Personal
 Route::resource('dashboard/personal', PersonalController::class);
-Route::resource('dashboard/reminder', ReminderController::class);
+Route::resource('dashboard/rper', ReminderController::class);
 Route::resource('dashboard/todo', TodoController::class);
