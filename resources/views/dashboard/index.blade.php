@@ -6,8 +6,8 @@
 
 @section('content')
     <div class="h-full">
-        <div class="py-2 flex ">
-            <div class="p-2 space-x-1.5 mx-auto mt-12">
+        <div class="py-2 flex">
+            <div class="p-2 space-x-1.5 mt-12">
                 <a id="homeBtn" class="p-2 py-2 bg-white rounded cursor-pointer">
                     Home
                 </a>
@@ -19,6 +19,7 @@
                 </a>
             </div>
         </div>
+        <div id="home" class="bg-gray-400" style="display: block">
             <div class="flex items-center  justify-center h-screen mb-5 overflow-hidden bg-center bg-cover" style="margin-top: -3.5%; background-image: url(https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80)">
                 <div class=" p-8 text-2xl text-white bg-black bg-opacity-90 rounded-xl style="margin-top: -2%"">
                     <div class="text-center" >
@@ -45,7 +46,7 @@
 
 
         <div class="my-5"></div>
-        <div id="home" class="bg-gray-400" style="display: block">
+
             <section class="text-gray-600 body-font">
                 <div class="container px-5 py-10 mx-auto max-w-7x1">
                     <div class="flex flex-wrap w-full mb-4 p-4">
@@ -352,7 +353,6 @@
                         class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Edit</button>
                 </div>
                 <!-- End of about section -->
-  <!-- About edit -->
              <!-- About Section  edit-->
              <div class="p-3 shadow-sm rounded-sm" style="display: none">
                 <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
@@ -382,7 +382,7 @@
                     </div>
                 </div>
                 <button 
-                    class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Edit</button>
+                    class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Submit</button>
             </div>
             <!-- End of about section -->
 <!-- End of about section -->
