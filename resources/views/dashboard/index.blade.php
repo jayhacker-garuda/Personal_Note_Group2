@@ -50,11 +50,7 @@
                 <div class="container px-5 py-24 mx-auto max-w-7x1">
                     <div class="flex flex-wrap w-full mb-4 p-4">
                         <div class="w-full mb-6 lg:mb-0">
-<<<<<<< HEAD
-                            <h1 class="sm:text-4xl text-5xl font-medium  title-font mb-2 text-gray-900">To Do List</h1>
-=======
                             <h1 class="sm:text-4xl text-5xl font-bold title-font mb-2 text-gray-900">To Do List</h1>
->>>>>>> 1a14f44aa6af2b606bbc4c4c5da7a19be82414b7
                             <div class="h-1 w-20 bg-indigo-500 rounded"></div>
 
                         </div>

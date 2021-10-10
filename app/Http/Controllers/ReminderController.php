@@ -84,6 +84,8 @@ class ReminderController extends Controller
      */
     public function destroy(Reminder $reminder)
     {
-        //
+        $reminder->delete();
+
+        return redirect()->route('dashboard.index');
     }
 }
