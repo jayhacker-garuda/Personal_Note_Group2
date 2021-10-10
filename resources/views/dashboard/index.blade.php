@@ -19,8 +19,9 @@
                 </a>
             </div>
         </div>
-            <div class="flex items-center  justify-center h-screen mb-5 overflow-hidden bg-center bg-cover" style="margin-top: -3.5%; background-image: url(https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80)">
-                <div class=" p-8 text-2xl text-white bg-black bg-opacity-90 rounded-xl" style="margin-top: -2%">
+        <div id="home" class="bg-gray-400" style="display: block">
+            <div class="flex items-center  justify-center  h-screen mb-5 overflow-hidden bg-center bg-cover" style="margin-top: -3.5%; background-image: url(https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80)">
+                <div class=" p-8 text-2xl text-white bg-black bg-opacity-25 rounded-xl" style="margin-top: -2%">
                     <div class="text-center" >
                         <h1 class="text-white text-6xl font-bold">Welcome To Personal Notes</h1>
                         <div class="my-3"></div>
@@ -36,7 +37,19 @@
                 </div>
                 <div class="mx-10"></div>
                 <div class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
-                    <h1>Create a Post</h1>
+                    <h1>Create a Personal</h1>
+                    <div class="my-5"></div>
+                    <a href="{{ url('dashboard/personal/create') }}" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2" >Create</a>
+                </div>
+                <div class="mx-10"></div>
+                <div class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
+                    <h1>Create a Reminder</h1>
+                    <div class="my-5"></div>
+                    <a href="" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2" >Create</a>
+                </div>
+                <div class="mx-10"></div>
+                <div class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
+                    <h1>Create a Todo</h1>
                     <div class="my-5"></div>
                     <a href="" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2" >Create</a>
                 </div>
@@ -44,8 +57,8 @@
 
 
 
-        <div class="my-5"></div>
-        <div id="home" class="bg-gray-400" style="display: block">
+        <div class="my-1"></div>
+
             <section class="text-gray-600 body-font">
                 <div class="container px-5 py-10 mx-auto max-w-7x1">
                     <div class="flex flex-wrap w-full mb-4 p-4">
