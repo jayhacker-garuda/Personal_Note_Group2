@@ -322,7 +322,7 @@
                     <label>
                         <input name="profilePicture" class="hidden" id="file"
                                type="file" {{--onchange="changeImage(event)"--}}/>
-                        <img id="output" src="{{ $User->profile_picture }}"
+                        <img id="output" src="{{ url('/storage/media/'.Auth::user()->profile_image) }}"
                              class="mb-20 h-56 w-56 object-cover rounded-full">
                     </label>
                 </form>
