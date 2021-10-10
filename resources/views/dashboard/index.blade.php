@@ -19,7 +19,7 @@
                 </a>
             </div>
         </div>
-        <div id="home" class="bg-gray-400" style="display: block">
+        <div class="bg-gray-400">
             <div class="flex items-center  justify-center  h-screen mb-5 overflow-hidden bg-center bg-cover"
                 style="margin-top: -3.5%; background-image: url(https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80)">
                 <div class=" p-8 text-2xl text-white bg-black bg-opacity-25 rounded-xl" style="margin-top: -2%">
@@ -63,7 +63,7 @@
 
 
 
-            <div class="my-5"></div>
+            {{-- <div class="my-5"></div> --}}
             <div id="home" class="bg-gray-400" style="display: block">
                 <section class="text-gray-600 body-font">
                     <div class="container px-5 py-10 mx-auto max-w-7x1">
@@ -332,7 +332,7 @@
 
 
                 <div class="">
- <div class=" w-full text-white">
+                    <div class=" w-full text-white">
                     <div x-data="{ open: false }"
                         class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                         <div class="p-4 flex flex-row items-center justify-between">
@@ -368,7 +368,7 @@
                                 <label>
                                     <input name="profilePicture" class="hidden" id="file" type="file"
                                         {{-- onchange="changeImage(event)" --}} />
-                                    <img id="output" src="{{ url('/storage/media/' . Auth::user()->profile_image) }}"
+                                    <img id="output" src="{{ url('/storage/media/' . Auth::user()->profile_picture) }}"
                                         class="mb-20 h-56 w-56 object-cover rounded-full">
                                 </label>
                             </form>
@@ -442,7 +442,7 @@
                                             </div>
                                         </div>
                                         <button
-                                            class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Edit</button>
+                                            class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Submit</button>
                                     </div>
                                     <!-- End of about section -->
                                     <!-- End of about section -->
@@ -463,6 +463,7 @@
             </div>
 
         </div>
+
 
 
 
