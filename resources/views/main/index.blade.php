@@ -20,15 +20,6 @@
 
 
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
-
-<body class="bg-gray-100 h-screen">
-{{--<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">--}}
-{{--<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">--}}
-
-
-<body class="bg-gray-100 h-screen">
-
-
 <section class="relative  bg-blueGray-50">
     <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
         <div class="absolute top-0 w-full h-full bg-center bg-cover" style="
@@ -156,27 +147,6 @@
         </div>
     </div>
 </section>
-
-
-
-
-<!-- card end -->
-
-
-
-{{--<div class="flex flex-wrap items-center justify-center" style="margin-top: -10%">--}}
-{{--    <div class="rounded-2xl bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 w-auto text-center text-white p-8 ">--}}
-{{--        <h1 class="text-2xl ">View others post</h1>--}}
-{{--        <div class="my-5"></div>--}}
-{{--        <a href="" class="items-center w-3/12 mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">View</a>--}}
-{{--    </div>--}}
-{{--    <div class="mx-10"></div>--}}
-{{--    <div class="rounded-2xl bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 w-auto text-center text-white p-8 ">--}}
-{{--        <h1 class="text-2xl ">Create a post</h1>--}}
-{{--        <div class="my-5"></div>--}}
-{{--        <a href="" class="items-center w-3/12 mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">View</a>--}}
-{{--    </div>--}}
-{{--</div>--}}
 
 <!-- Foooter -->
 <section class="bg-white">

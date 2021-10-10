@@ -7,6 +7,8 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\UserDashboardController;
+use App\Http\Controllers\ProfileController;
+
 
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\ReminderController;
@@ -48,6 +50,11 @@ Route::middleware(['user_type'])->group(function () {
 
 // User Dashboard
 Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
+Route::POST('/ppUpdate', [ProfileController::class, 'ppUpdate'])->name('profile');
+Route::POST('/edit', [ProfileController::class, 'edit'])->name('edit');
+
+
+
 
 
 // Logout User
@@ -56,5 +63,5 @@ Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 // Todo, Reminder and Personal
 Route::resource('dashboard/personal', PersonalController::class);
-Route::resource('dashboard/reminder', ReminderController::class);
+Route::resource('dashboard/rper', ReminderController::class);
 Route::resource('dashboard/todo', TodoController::class);
