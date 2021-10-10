@@ -19,16 +19,16 @@
                 </a>
             </div>
         </div>
-            <div class="flex items-center justify-center h-screen mb-5 overflow-hidden" style="margin-top: -9%">
-                <div class="relative z-30 p-5 text-2xl text-white bg-black  rounded-xl">
-                    <div class="text-center">
+            <div class="flex items-center  justify-center h-screen mb-5 overflow-hidden bg-center bg-cover" style="margin-top: -3.5%; background-image: url(https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80)">
+                <div class=" p-8 text-2xl text-white bg-black bg-opacity-90 rounded-xl style="margin-top: -2%"">
+                    <div class="text-center" >
                         <h1 class="text-white text-6xl font-bold">Welcome To Personal Notes</h1>
                         <div class="my-3"></div>
                         <h2 class="text-white text-5xl font-bold">{{ Auth::user()->name }}</h2>
                     </div>
                 </div>
             </div>
-            <div class="flex flex-wrap items-center justify-center" style="margin-top: -16%">
+            <div class="flex flex-wrap mb-20 items-center justify-center" style="margin-top: -14%">
                 <div class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
                    <h1>View others post</h1>
                     <div class="my-5"></div>
@@ -44,10 +44,10 @@
 
 
 
-        <div class="my-5 bg-gray-500"></div>
+        <div class="my-5"></div>
         <div id="home" class="bg-gray-400" style="display: block">
             <section class="text-gray-600 body-font">
-                <div class="container px-5 py-24 mx-auto max-w-7x1">
+                <div class="container px-5 py-10 mx-auto max-w-7x1">
                     <div class="flex flex-wrap w-full mb-4 p-4">
                         <div class="w-full mb-6 lg:mb-0">
                             <h1 class="sm:text-4xl text-5xl font-bold title-font mb-2 text-gray-900">To Do List</h1>
@@ -169,7 +169,7 @@
                         </div>
                         <div class="xl:w-1/3 md:w-1/2 p-4">
                             <div class="bg-white p-6 rounded-lg">
-                                
+
                                 <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian</h2>
                                 <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
                                 <div class="my-5 space-x-1.5">
@@ -408,7 +408,15 @@
 
         <div id="settings" style="display: none">
             <!-- Settings Display -->
-            <h1>Rojae Anderson</h1>
+            <h1 class="text-3xl font-bold">Settings</h1>
+            <div class="flex flex-col items-center justify-center mt-1/12 mb-2 overflow-hidden">
+                <h1 class="text-3xl text-center">Deactivate Button</h1>
+                <div class="w-2/6">
+                    <a href="#"
+                        class="text-center bg-black hover:text-red-600 block w-full p-5 my-2 text-sm font-semibold text-white rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline  hover:shadow-xs">
+                        Deactivate</a>
+                </div>
+            </div>
         </div>
     </div>
 @endsection
