@@ -7,7 +7,7 @@
 @section('content')
     <div class="h-full">
         <div class="py-2 flex">
-            <div class="p-2 space-x-1.5 mx-auto">
+            <div class="p-2 space-x-1.5 mt-12">
                 <a id="homeBtn" class="p-2 py-2 bg-white rounded cursor-pointer">
                     Home
                 </a>
