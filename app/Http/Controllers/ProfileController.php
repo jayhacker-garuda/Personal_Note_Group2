@@ -19,13 +19,13 @@ class ProfileController extends Controller
         ]);
 
 
-        $currentImage =  uniqid('', true) . "." . $request->file("profilePicture")->getClientOriginalExtension();
+        $filename = $request->file('profilePicture')->getClientOriginalName();
 
-        $saveImage = $request->file("profilePicture")->storeAs($path, $currentImage);
+        $request->file("profilePicture")->storeAs('media', $filename,'public');
 
 
         $updateImage = User::find(Auth::id())->first()->update([
-            'profile_picture' => $path."/".$currentImage
+            'profile_picture' => $filename
         ]);
 
         return redirect()->back();
