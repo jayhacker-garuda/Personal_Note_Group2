@@ -46,6 +46,10 @@ Route::post('/admin/login', [AdminLoginController::class, 'loginAdmin'])->name('
 Route::middleware(['user_type'])->group(function () {
     // Admin Dashboard
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    
+    // Create Note Category
+    Route::get('/admin/note-category/create', [AdminController::class, 'createNoteCategory'])->name('admin.note-category.create');
+    Route::get('/admin/note-category/store', [AdminController::class, 'storeNoteCategory'])->name('admin.note-category.store');
 });
 
 // User Dashboard
@@ -62,6 +66,6 @@ Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 
 // Todo, Reminder and Personal
-Route::resource('dashboard/personal', PersonalController::class);
+Route::resource('dashboard/personal', PersonalController::class,);
 Route::resource('dashboard/reminder', ReminderController::class);
 Route::resource('dashboard/todo', TodoController::class);

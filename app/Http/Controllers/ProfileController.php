@@ -12,10 +12,10 @@ class ProfileController extends Controller
 {
     public function ppUpdate (Request $request) {
 
-        $path = 'public/media';
+        // $path = 'storage/media';
 
         $this->validate($request,[
-            'profilePicture' => 'required|image|max:10000'
+            'profilePicture' => 'required|image|max:10000|mimes:jpg,png,jpeg'
         ]);
 
 
@@ -29,8 +29,7 @@ class ProfileController extends Controller
         ]);
 
         return redirect()->back();
-        // dd($request->all());
-        // return view('//dashboard');
+        
     }
 
     public function edit () {

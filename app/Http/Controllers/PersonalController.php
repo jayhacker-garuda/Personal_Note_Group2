@@ -11,7 +11,7 @@ class PersonalController extends Controller
     {
         return $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +19,7 @@ class PersonalController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     /**
