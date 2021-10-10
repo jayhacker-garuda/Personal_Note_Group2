@@ -13,6 +13,11 @@ class Reminder extends Model
      * @var string[]
      */
     protected $fillable = [
-        'user_id', 'reminder_date', 'remind_about'
+        'note_category_id', 'user_id', 'reminder_date', 'remind_about'
     ];
+
+    public function noteCategory()
+    {
+        return $this->hasMany(NoteCategory::class);
+    }
 }
