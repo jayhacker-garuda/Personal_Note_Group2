@@ -349,292 +349,7 @@
                         },
                     });
                 </script>
-{{--                <section class="text-gray-600 body-font container mx-auto">--}}
-{{--                    <div class="-mt-4">--}}
-{{--                        <div class="flex flex-wrap w-full mb-4 p-4">--}}
-{{--                            <div class="w-full mb-6 lg:mb-0">--}}
-{{--                                <h1 class="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900">Todo List--}}
-{{--                                </h1>--}}
-{{--                                <div class="h-1 w-20 bg-indigo-500 rounded"></div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="container px-5 py-8 mx-auto max-w-7x1 mt-4">--}}
-{{--                              <div class="overflow-x-scroll flex flex-col overflow-y-hidden whitespace-nowrap">--}}
-{{--                                    <div class="inline-block">--}}
-{{--                                        <div class="flex flex-wrap w-full mb-4 p-4">--}}
-{{--                                            <div class="w-full mb-6 lg:mb-0">--}}
-{{--                                                <h1 class="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900">Reminder List--}}
-{{--                                                </h1>--}}
-{{--                                                <div class="h-1 w-20 bg-indigo-500 rounded"></div>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="flex flex-wrap -m-2">--}}
-{{--                                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                                <div class="bg-white p-6 rounded-lg">--}}
-{{--                                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                                    </h2>--}}
-{{--                                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                                    <div class="my-5 space-x-1.5">--}}
-{{--                                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                                <div class="bg-white p-6 rounded-lg">--}}
-{{--                                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                                    </h2>--}}
-{{--                                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                                    <div class="my-5 space-x-1.5">--}}
-{{--                                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                                <div class="bg-white p-6 rounded-lg">--}}
-{{--                                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                                    </h2>--}}
-{{--                                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                                    <div class="my-5 space-x-1.5">--}}
-{{--                                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                                <div class="bg-white p-6 rounded-lg">--}}
-{{--                                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                                    </h2>--}}
-{{--                                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                                    <div class="my-5 space-x-1.5">--}}
-{{--                                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                                <div class="bg-white p-6 rounded-lg">--}}
 
-{{--                                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                                    </h2>--}}
-{{--                                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                                    <div class="my-5 space-x-1.5">--}}
-{{--                                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                                <div class="bg-white p-6 rounded-lg">--}}
-{{--                                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                                    </h2>--}}
-{{--                                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                                    <div class="my-5 space-x-1.5">--}}
-{{--                                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-
-{{--                                        </div>--}}
-{{--                                  <div class="inline-block -m-2">--}}
-{{--                                      <div class="flex flex-wrap xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                          <div class="bg-white p-6 rounded-lg">--}}
-{{--                                              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                              </h2>--}}
-{{--                                              <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                                  waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                              <div class="my-5 space-x-1.5">--}}
-{{--                                                  <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                                  <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                              </div>--}}
-{{--                                          </div>--}}
-
-{{--                                      </div>--}}
-{{--                                  </div>--}}
-
-{{--                              </div>--}}
-
-{{--                        </div>--}}
-
-{{--                    </div>--}}
-
-{{--                    <div class="container px-5 py-8 mx-auto max-w-7x1">--}}
-{{--                        <div class="flex flex-wrap w-full mb-4 p-4">--}}
-{{--                            <div class="w-full mb-6 lg:mb-0">--}}
-{{--                                <h1 class="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900">Reminder List--}}
-{{--                                </h1>--}}
-{{--                                <div class="h-1 w-20 bg-indigo-500 rounded"></div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="flex flex-wrap -m-4">--}}
-{{--                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                <div class="bg-white p-6 rounded-lg">--}}
-{{--                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                    </h2>--}}
-{{--                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                    <div class="my-5 space-x-1.5">--}}
-{{--                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                <div class="bg-white p-6 rounded-lg">--}}
-{{--                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                    </h2>--}}
-{{--                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                    <div class="my-5 space-x-1.5">--}}
-{{--                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                <div class="bg-white p-6 rounded-lg">--}}
-{{--                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                    </h2>--}}
-{{--                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                    <div class="my-5 space-x-1.5">--}}
-{{--                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                <div class="bg-white p-6 rounded-lg">--}}
-{{--                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                    </h2>--}}
-{{--                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                    <div class="my-5 space-x-1.5">--}}
-{{--                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                <div class="bg-white p-6 rounded-lg">--}}
-
-{{--                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                    </h2>--}}
-{{--                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                    <div class="my-5 space-x-1.5">--}}
-{{--                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                <div class="bg-white p-6 rounded-lg">--}}
-{{--                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                    </h2>--}}
-{{--                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                    <div class="my-5 space-x-1.5">--}}
-{{--                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-
-{{--                    <div class="container px-5 py-8 mx-auto max-w-7x1">--}}
-{{--                        <div class="flex flex-wrap w-full mb-4 p-4">--}}
-{{--                            <div class="w-full mb-6 lg:mb-0">--}}
-{{--                                <h1 class="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900">Personal List--}}
-{{--                                </h1>--}}
-{{--                                <div class="h-1 w-20 bg-indigo-500 rounded"></div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="flex flex-wrap -m-4">--}}
-{{--                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                <div class="bg-white p-6 rounded-lg">--}}
-{{--                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                    </h2>--}}
-{{--                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                    <div class="my-5 space-x-1.5">--}}
-{{--                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                <div class="bg-white p-6 rounded-lg">--}}
-{{--                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                    </h2>--}}
-{{--                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                    <div class="my-5 space-x-1.5">--}}
-{{--                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                <div class="bg-white p-6 rounded-lg">--}}
-{{--                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                    </h2>--}}
-{{--                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                    <div class="my-5 space-x-1.5">--}}
-{{--                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                <div class="bg-white p-6 rounded-lg">--}}
-{{--                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                    </h2>--}}
-{{--                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                    <div class="my-5 space-x-1.5">--}}
-{{--                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                <div class="bg-white p-6 rounded-lg">--}}
-{{--                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                    </h2>--}}
-{{--                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                    <div class="my-5 space-x-1.5">--}}
-{{--                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="xl:w-1/3 md:w-1/2 p-4">--}}
-{{--                                <div class="bg-white p-6 rounded-lg">--}}
-{{--                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian--}}
-{{--                                    </h2>--}}
-{{--                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit--}}
-{{--                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>--}}
-{{--                                    <div class="my-5 space-x-1.5">--}}
-{{--                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>--}}
-{{--                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </section>--}}
             </div>
 
             <div id="profile" style="display: none">
@@ -647,7 +362,7 @@
 
 
 
-                <div class="">
+                <div class="bg-gradient-to-b from-gray-600 via-black to-black w-auto text-center text-white p-8">
                     <div class=" w-full text-white">
                     <div x-data="{ open: false }"
                         class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
@@ -776,13 +491,23 @@
     <div id="settings" style="display: none">
         <!-- Settings Display -->
         <h1 class="text-3xl font-bold">Settings</h1>
-        <div class="flex flex-col items-center justify-center mt-1/12 mb-2 overflow-hidden">
-            <h1 class="text-3xl text-center">Deactivate Button</h1>
-            <div class="w-2/6">
-                <a href="#"
-                    class="text-center bg-black hover:text-red-600 block w-full p-5 my-2 text-sm font-semibold text-white rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline  hover:shadow-xs">
-                    Deactivate</a>
-            </div>
+        <div class="flex flex-wrap space-x-80 justify-center items-center">
+                <div class="flex flex-col items-center justify-center mt-1/12 mb-2 overflow-hidden">
+                    <h1 class="text-3xl text-center font-bold">Deactivate Button</h1>
+                    <div class="w-4/6">
+                        <a href="#"
+                            class="text-center bg-black hover:text-red-600 block w-full p-5 my-2 text-sm font-semibold text-white rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline  hover:shadow-xs">
+                            Deactivate</a>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center mt-1/12 mb-2 overflow-hidden">
+                    <h1 class="text-3xl text-center font-bold">Contact Button</h1>
+                    <div class="w-4/6">
+                        <a href="#"
+                           class="text-center bg-black hover:text-red-600 block w-full p-5 my-2 text-sm font-semibold text-white rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline  hover:shadow-xs">
+                            Contact</a>
+                    </div>
+                </div>
         </div>
     </div>
     </div>
