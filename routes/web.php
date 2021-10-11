@@ -12,6 +12,7 @@ use App\Http\Controllers\ProfileController;
 
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\ReminderController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\TodoController;
 
 use Illuminate\Auth\Events\Login;
@@ -69,3 +70,7 @@ Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 Route::resource('dashboard/personal', PersonalController::class);
 Route::resource('dashboard/reminder', ReminderController::class);
 Route::resource('dashboard/todo', TodoController::class);
+
+// Contact Controller
+Route::get('contact', [ContactController::class, 'get_contact']);
+Route::get('contact', [ContactController::class, 'store_contact']);
