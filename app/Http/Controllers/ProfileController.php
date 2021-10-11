@@ -6,11 +6,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
-    public function ppUpdate (Request $request) {
+    public function ppUpdate(Request $request) {
 
         // $path = 'storage/media';
 
@@ -24,7 +24,7 @@ class ProfileController extends Controller
         $request->file("profilePicture")->storeAs('media', $filename,'public');
 
 
-        $updateImage = User::find(Auth::id())->first()->update([
+        User::where('id',Auth::user()->id)->update([
             'profile_picture' => $filename
         ]);
 
