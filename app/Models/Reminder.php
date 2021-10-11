@@ -18,6 +18,11 @@ class Reminder extends Model
 
     public function noteCategory()
     {
-        return $this->hasMany(NoteCategory::class);
+        return $this->belongsTo(NoteCategory::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }
