@@ -359,9 +359,9 @@
 
                 {{-- {{-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> --}}
                 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-
-
-
+                <div class=" -mb-15" >
+                    <h1 class="sm:text-4xl text-5x font-bold title-font mb-2 text-gray-900">Profile</h1>
+                </div>
                 <div class="bg-gray-400 w-auto text-center text-white p-5">
                     <div class=" w-full text-white">
                     <div x-data="{ open: false }"
@@ -384,8 +384,8 @@
                 </div>
                 <!-- End of Navbar -->
 
-                <div class="bg-black rounded-2xl container mx-auto my-5 p-5">
-                    <div class="md:flex no-wrap my-5 md:-mx-2 ">
+                <div class="bg-black rounded-2xl w-9/12 container mx-auto my-5 p-5">
+                    <div class="md:flex no-wrap  md:-mx-2 ">
                         <!-- Left Side -->
                         <div class="w-full md:w-3/12 md:mx-2">
                             <!-- Profile Card -->
@@ -405,7 +405,7 @@
                             <div class="my-4"></div>
                         </div>
                         <!-- Right Side -->
-                        <div class="w-full my-8 md:w-6/12 mx-5   h-64">
+                        <div class="w-full my-8 md:w-/12 mx-10   h-64">
                             <!-- Profile tab -->
                             <!-- About Section -->
                             <div class="bg-white p-3 shadow-sm rounded-2xl mb-10">
