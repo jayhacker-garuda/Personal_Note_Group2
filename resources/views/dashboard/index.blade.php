@@ -42,7 +42,8 @@
                     class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
                     <h1>Create a Personal</h1>
                     <div class="my-5"></div>
-                    <a href="{{ url('dashboard/personal/create') }}"
+                    {{-- <a href="{{ url('dashboard/personal/create') }}" --}}
+                    <a href="{{ route('personal.create') }}"
                         class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">Create</a>
                 </div>
                 <div class="mx-10"></div>
@@ -50,14 +51,14 @@
                     class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
                     <h1>Create a Reminder</h1>
                     <div class="my-5"></div>
-                    <a href="" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">Create</a>
+                    <a href="{{ route('rper.create') }}" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">Create</a>
                 </div>
                 <div class="mx-10"></div>
                 <div
                     class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
                     <h1>Create a Todo</h1>
                     <div class="my-5"></div>
-                    <a href="" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">Create</a>
+                    <a href="{{ route('todo.create') }}" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">Create</a>
                 </div>
             </div>
 

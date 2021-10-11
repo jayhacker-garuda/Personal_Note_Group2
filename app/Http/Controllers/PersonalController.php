@@ -40,11 +40,10 @@ class PersonalController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
 
-        ]);
+        Personal::create($request->validated());
 
-        Personal::create($request->all());
+        return redirect()->route('personal.index');
     }
 
     /**
@@ -66,7 +65,7 @@ class PersonalController extends Controller
      */
     public function edit(Personal $personal)
     {
-        return view('dashboard.edit');
+        return view('dashboard.personal.edit', compact('personal'));
     }
 
     /**
