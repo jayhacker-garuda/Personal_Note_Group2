@@ -8,14 +8,14 @@
     <div class="max-w-3xl mx-auto sm:px-6 lg:px-8 mt-2/12">
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 bg-white border-b border-gray-200">
-                <form method="POST" action="#">
+                <form method="POST" action="{{ route('todo.store') }}">
                     <h1 class="text-xl text-center">ToDo</h1>
                     <br>
                     <div class="mb-4">
                         <label class="text-xl text-gray-600">Date <span class="text-red-500">*</span></label></br>
-                        <input type="date" class="border-2 border-gray-300 p-2 w-full" name="todo_date" id="todo_date" value="" required>
+                        <input type="date" class="border-2 border-gray-300 p-2 w-full" name="todo_date" id="todo_date" value="{{ old('todo_date') }}" required>
                     </div>
-<div class="mb-4">
+                    <div class="mb-4">
                         <label class="text-xl text-gray-600">Task</label></br>
                         <input type="text" class="border-2 border-gray-300 p-2 w-full" name="todo" id="todo" placeholder="(Optional)">
                     </div>
