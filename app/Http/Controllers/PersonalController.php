@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\NoteCategory;
 use App\Models\Personal;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,7 @@ class PersonalController extends Controller
     {
         return $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +20,7 @@ class PersonalController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     /**
@@ -29,7 +30,7 @@ class PersonalController extends Controller
      */
     public function create()
     {
-        return view('dashboard.personal.create');
+        return view('dashboard.personal.create')->with('noteCategory', NoteCategory::all());
     }
 
     /**
