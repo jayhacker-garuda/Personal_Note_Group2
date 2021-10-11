@@ -49,7 +49,7 @@ Route::middleware(['user_type'])->group(function () {
     
     // Create Note Category
     Route::get('/admin/note-category/create', [AdminController::class, 'createNoteCategory'])->name('admin.note-category.create');
-    Route::get('/admin/note-category/store', [AdminController::class, 'storeNoteCategory'])->name('admin.note-category.store');
+    Route::post('/admin/note-category/store', [AdminController::class, 'storeNoteCategory'])->name('admin.note-category.store');
 });
 
 // User Dashboard
