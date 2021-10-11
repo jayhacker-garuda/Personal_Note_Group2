@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,10 +27,20 @@ class LoginController extends Controller
         if (Auth::attempt($credential)) {
 
             if (Auth::user()->user_type === 'user') {
-
+                
+                User::where('id', Auth::user()->id)->update([
+                    'status' => 'active'
+                ]);
                 return redirect()->route('dashboard.index')->with('success', '.....');
-            } else {
+                
+            }elseif (Auth::user()->status === 'deactivated') {
+                
                 return redirect()->route('login')->with('error', '❌❌❌');
+                
+            } else {
+                
+                return redirect()->route('login')->with('error', '❌❌❌');
+                
             }
         } else {
 
