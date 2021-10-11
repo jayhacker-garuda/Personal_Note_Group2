@@ -70,7 +70,3 @@ Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 Route::resource('dashboard/personal', PersonalController::class);
 Route::resource('dashboard/reminder', ReminderController::class);
 Route::resource('dashboard/todo', TodoController::class);
-
-// Contact Controller
-Route::get('contact', [ContactController::class, 'get_contact']);
-Route::get('contact', [ContactController::class, 'store_contact']);
