@@ -41,13 +41,13 @@ class ProfileController extends Controller
 
         // dd($request);
 
-        if($request->method === 'POST'){
-            User::where('id', $id)->update([
-               'name' => $request->name,
-               'email' => $request->email 
-            ]);
-            return redirect()->back();
-        }
+        User::where('id', $id)->update([
+           'name' => $request->name,
+           'email' => $request->email 
+        ]);
+        return redirect()->back();
+        
+
 
     }
 
