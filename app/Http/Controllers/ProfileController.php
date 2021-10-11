@@ -32,9 +32,22 @@ class ProfileController extends Controller
         
     }
 
-    public function edit () {
+    public function edit (Request $request, $id) {
+        
+        $request->validate([
+           'name' => 'required',
+           'email' => 'required'
+        ]);
 
-        return redirect()->back();
+        // dd($request);
+
+        if($request->method === 'POST'){
+            User::where('id', $id)->update([
+               'name' => $request->name,
+               'email' => $request->email 
+            ]);
+            return redirect()->back();
+        }
 
     }
 

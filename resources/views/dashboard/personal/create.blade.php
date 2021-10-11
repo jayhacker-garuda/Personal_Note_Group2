@@ -19,17 +19,14 @@
                             <input type="text" class="border-2 border-gray-300 p-2 w-full" name="description" id="description" placeholder="">
                         </div>
 
-{{--                        <div class="mb-8">--}}
-{{--                            <label class="text-xl text-gray-600">Content <span class="text-red-500">*</span></label></br>--}}
-{{--                            <textarea name="content" class="border-2 border-gray-500">--}}
-{{--                                --}}
-{{--                            </textarea>--}}
-{{--                        </div>--}}
 
                         <div class="flex p-1">
-                            <select class="border-2 border-gray-300 border-r p-2" name="action">
-                                <option>Set as public</option>
-                                <option>Set as private</option>
+                            <select class="border-2 border-gray-300 border-r p-2" name="category_id">
+                                <option disabled selected>Note Permission</option>
+                                @foreach ($noteCategory as $category )
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    
+                                @endforeach
                             </select>
                             <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Submit</button>
                         </div>

@@ -49,13 +49,13 @@ Route::middleware(['user_type'])->group(function () {
     
     // Create Note Category
     Route::get('/admin/note-category/create', [AdminController::class, 'createNoteCategory'])->name('admin.note-category.create');
-    Route::get('/admin/note-category/store', [AdminController::class, 'storeNoteCategory'])->name('admin.note-category.store');
+    Route::post('/admin/note-category/store', [AdminController::class, 'storeNoteCategory'])->name('admin.note-category.store');
 });
 
 // User Dashboard
 Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
 Route::POST('/ppUpdate', [ProfileController::class, 'ppUpdate'])->name('profile');
-Route::POST('/edit', [ProfileController::class, 'edit'])->name('edit');
+Route::POST('/dashboard/{name}/edit/', [ProfileController::class, 'edit'])->name('dashboard.edit');
 
 
 
