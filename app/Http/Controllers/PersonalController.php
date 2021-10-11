@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\NoteCategory;
 use App\Models\Personal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PersonalController extends Controller
 {
@@ -42,10 +43,23 @@ class PersonalController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-
+           'title' => 'required|min:4|string|unique:personals',
+            'description' => 'required|max:150|string',
+            'category_id' => 'required'
         ]);
 
-        Personal::create($request->all());
+        // dd($request);
+        
+        Personal::create([
+            'user_id' => Auth::user()->id,
+            'title' => $request->title,
+            'description' => $request->description,
+            'note_category_id' => $request->category_id
+        ]);
+
+        
+
+        return redirect()->route('dashboard.index')->with('personal-note','.....');
     }
 
     /**
@@ -67,7 +81,7 @@ class PersonalController extends Controller
      */
     public function edit(Personal $personal)
     {
-        return view('dashboard.edit');
+        return view('dashboard.personal.edit', compact('personal'));
     }
 
     /**
