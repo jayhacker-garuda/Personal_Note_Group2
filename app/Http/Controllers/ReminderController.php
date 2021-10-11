@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class ReminderController extends Controller
 {
+    public function __construct()
+    {
+        return $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +18,7 @@ class ReminderController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.reminder.create');
     }
 
     /**
@@ -24,7 +28,7 @@ class ReminderController extends Controller
      */
     public function create()
     {
-        //
+       
     }
 
     /**

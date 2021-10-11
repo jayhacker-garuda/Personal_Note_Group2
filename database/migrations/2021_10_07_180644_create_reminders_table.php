@@ -15,6 +15,7 @@ class CreateRemindersTable extends Migration
     {
         Schema::create('reminders', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('note_category_id');
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->date('reminder_date');

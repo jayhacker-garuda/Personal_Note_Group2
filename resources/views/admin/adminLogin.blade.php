@@ -1,7 +1,7 @@
 @extends('layouts.adminDefault')
 
 @section('title')
-
+    <title>{{ config('app.name') }}Admin Login</title>
 @endsection
 
 @section('admin-panel')

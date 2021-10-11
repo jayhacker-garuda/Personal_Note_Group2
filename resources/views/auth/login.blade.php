@@ -5,12 +5,6 @@
 @endsection
 
 @section('content')
-<<<<<<< HEAD
-<<<<<<< HEAD
-    Login
-=======
-=======
->>>>>>> 2c8017bde446176cd7743c54504a654d50f568f7
     <div class="min-h-screen bg-no-repeat bg-cover bg-fixed"
         style="background-image: url('https://www.sysmex-ap.com/new-zealand/wp-content/uploads/sites/13/2020/05/Company-Press-Release.jpg  ')">
         <div class="flex justify-end">
@@ -54,8 +48,8 @@
                             <span class="text-sm text-blue-700 hover:underline cursor-pointer">Forgot password?</span>
                         </div>
                         <div class="">
-                            <button class=" mt-4 mb-3 w-full bg-green-500
-                            hover:bg-green-400 text-white py-4 rounded-md transition duration-100">Login now</button>
+                            <button class=" mt-4 mb-3 w-full bg-black
+                           text-white py-4 rounded-md transition duration-100">Login now</button>
                             {{-- <div class="flex  space-x-2 justify-center items-end bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100""> --}}
 
                             {{-- <img class=" h-5 cursor-pointer" src="https://i.imgur.com/arC60SB.png" alt=""> --}}
@@ -70,10 +64,9 @@
         </div>
     </div>
     </div>
-<<<<<<< HEAD
+
     </div>
->>>>>>> 5d893577924e8b1bc8355a90da048f331eb6f8d4
-=======
+
 @endsection
 @section('js')
     @if (session()->has('success'))
