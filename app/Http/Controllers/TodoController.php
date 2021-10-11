@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class TodoController extends Controller
 {
+    public function __construct()
+    {
+        return $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +19,7 @@ class TodoController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -24,7 +29,7 @@ class TodoController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.todo.create');
     }
 
     /**
@@ -35,7 +40,9 @@ class TodoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Todo::create($request->validated());
+
+        return redirect()->route('todo.index');
     }
 
     /**
@@ -57,7 +64,7 @@ class TodoController extends Controller
      */
     public function edit(Todo $todo)
     {
-        //
+        return view('dashboard.reminder.edit', compact('todo'));
     }
 
     /**
@@ -80,6 +87,8 @@ class TodoController extends Controller
      */
     public function destroy(Todo $todo)
     {
-        //
+        $todo->delete();
+
+        return redirect()->route('dashboard.index');
     }
 }

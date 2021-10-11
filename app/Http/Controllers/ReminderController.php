@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class ReminderController extends Controller
 {
+    public function __construct()
+    {
+        return $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +18,7 @@ class ReminderController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -24,7 +28,7 @@ class ReminderController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.reminder.create');
     }
 
     /**
@@ -35,7 +39,9 @@ class ReminderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Reminder::create($request->validated());
+
+        return redirect()->route('rper.index');
     }
 
     /**
@@ -57,7 +63,7 @@ class ReminderController extends Controller
      */
     public function edit(Reminder $reminder)
     {
-        //
+        return view('dashboard.reminder.edit', compact('reminder'));
     }
 
     /**
@@ -80,6 +86,8 @@ class ReminderController extends Controller
      */
     public function destroy(Reminder $reminder)
     {
-        //
+        $reminder->delete();
+
+        return redirect()->route('dashboard.index');
     }
 }

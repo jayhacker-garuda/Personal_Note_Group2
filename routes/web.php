@@ -7,6 +7,8 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\UserDashboardController;
+use App\Http\Controllers\ProfileController;
+
 
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\ReminderController;
@@ -44,10 +46,19 @@ Route::post('/admin/login', [AdminLoginController::class, 'loginAdmin'])->name('
 Route::middleware(['user_type'])->group(function () {
     // Admin Dashboard
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    
+    // Create Note Category
+    Route::get('/admin/note-category/create', [AdminController::class, 'createNoteCategory'])->name('admin.note-category.create');
+    Route::post('/admin/note-category/store', [AdminController::class, 'storeNoteCategory'])->name('admin.note-category.store');
 });
 
 // User Dashboard
 Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
+Route::POST('/ppUpdate', [ProfileController::class, 'ppUpdate'])->name('profile');
+Route::POST('/dashboard/{name}/edit/', [ProfileController::class, 'edit'])->name('dashboard.edit');
+
+
+
 
 
 // Logout User

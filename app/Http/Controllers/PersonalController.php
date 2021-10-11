@@ -2,11 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\NoteCategory;
 use App\Models\Personal;
 use Illuminate\Http\Request;
 
 class PersonalController extends Controller
 {
+    public function __construct()
+    {
+        return $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +20,7 @@ class PersonalController extends Controller
      */
     public function index()
     {
-        return view('dashboard.index');
+
     }
 
     /**
@@ -24,7 +30,7 @@ class PersonalController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.personal.create')->with('noteCategory', NoteCategory::all());
     }
 
     /**
@@ -35,11 +41,10 @@ class PersonalController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
 
-        ]);
+        Personal::create($request->validated());
 
-        Personal::create($request->all());
+        return redirect()->route('personal.index');
     }
 
     /**
@@ -61,7 +66,7 @@ class PersonalController extends Controller
      */
     public function edit(Personal $personal)
     {
-        return view('dashboard.edit');
+        return view('dashboard.personal.edit', compact('personal'));
     }
 
     /**

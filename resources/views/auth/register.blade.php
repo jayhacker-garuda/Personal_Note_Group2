@@ -18,7 +18,7 @@
 
             <div class="text-left p-0 font-sans">
 
-                <h1 class=" text-gray-800 text-3xl font-medium text-center">Create an account for free</h1>
+                <h1 class=" text-gray-800 text-4xl font-medium text-center mb-10">Create an account for free</h1>
 {{--                <h3 class="p-1 text-gray-700">Free forever. No payment needed.</h3>--}}
             </div>
             <form action="{{ route('auth.saveUser') }}" method="POST" class="p-0">
@@ -69,7 +69,7 @@
                 </div>
 
                 <div class="mt-10">
-                    <input type="submit" value="Sign up " class="py-3 bg-green-500 text-white w-full rounded hover:bg-green-600">
+                    <input type="submit" value="Sign up " class="py-3 bg-black text-white w-full rounded">
                 </div>
             </form>
             <a class="" href="{{ route('login') }}" data-test="Link"><span class="block  p-5 text-center text-gray-800  text-xs ">Already have an account?</span></a>
