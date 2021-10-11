@@ -52,13 +52,17 @@ Route::middleware(['user_type'])->group(function () {
     Route::post('/admin/note-category/store', [AdminController::class, 'storeNoteCategory'])->name('admin.note-category.store');
 });
 
-// User Dashboard
-Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
-Route::POST('/ppUpdate', [ProfileController::class, 'ppUpdate'])->name('profile');
-Route::POST('/dashboard/{name}/edit/', [ProfileController::class, 'edit'])->name('dashboard.edit');
+
+Route::middleware(['note_user'])->group(function(){
 
 
+    // User Dashboard
+    Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
+    Route::post('/ppUpdate', [ProfileController::class, 'ppUpdate'])->name('profile');
+    Route::post('/dashboard/{name}/edit/', [ProfileController::class, 'edit'])->name('dashboard.edit');
 
+    
+});
 
 
 // Logout User
