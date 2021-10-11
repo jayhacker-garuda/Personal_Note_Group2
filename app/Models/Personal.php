@@ -13,6 +13,12 @@ class Personal extends Model
      * @var string[]
      */
     protected $fillable = [
-        'user_id', 'title', 'description',
+        'note_category_id', 'user_id', 'title', 'description',
     ];
+
+
+    public function noteCategory()
+    {
+        return $this->hasMany(NoteCategory::class);
+    }
 }

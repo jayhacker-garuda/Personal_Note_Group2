@@ -19,39 +19,31 @@
 </head>
 
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
-    <div class="">
-    <div class=" antialiased bg-green-500 dark-mode:bg-gray-900">
-        <div class="w-full text-gray-700 bg-dark dark-mode:text-gray-200 dark-mode:bg-gray-800">
-            <div x-data="{ open: true }"
-                class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-                <div class="flex flex-row items-center justify-between p-4">
-                    <a href="{{ url('/') }}"
-                        class="text-lg font-bold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Personal
-                        Notes</a>
-                </div>
-                <nav class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-                    @auth
-                        <form action="{{ route('logout') }}" method="post">
-                            @csrf
-                            <button type="submit"
-                                class="px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-400 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">Logout</button>
-                        </form>
-                    @else
-                        <a class="px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                            href="{{ route('login') }}">Login</a>
-                        <a class="px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                            href="{{ route('register') }}">Sign Up</a>
-                    @endauth
-                </nav>
+@auth
+    <div x-data="{ sidebarOpen: false }" class="flex h-screen bg-gray-200 font-roboto">
+            @include('layouts.sidebar')
+            
+            <div class="flex-1 flex flex-col overflow-hidden">
+                @include('layouts.header')
+
+                <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
+                    <div class="container mx-auto px-6 py-8">
+                        @yield('admin-panel')
+                    </div>
+                </main>
             </div>
         </div>
-    </div>
-    </div>
+@else
+<main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
+                    <div class="container mx-auto px-6 py-8">
+                        @yield('admin-panel')
+                    </div>
+                </main>
+@endauth
 
 
-    <div>
-        @yield('admin-panel')
-    </div>
+
+    
     @yield('js')
     <script src="{{ asset('js/jquery/jquery-3.6.0.js') }}"></script>
     <script src="{{ mix('js/app.js') }}"></script>
