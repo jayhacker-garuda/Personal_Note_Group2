@@ -5,6 +5,15 @@
 @endsection
 
 @section('content')
+{{--    <link--}}
+{{--        href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"--}}
+{{--        rel="stylesheet"--}}
+{{--    />--}}
+    <!--  Swiper's CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <div class="h-full">
         <div class="py-2 flex">
             <div class="p-2 space-x-1.5 mt-12">
@@ -38,322 +47,352 @@
                     <a href="" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">view</a>
                 </div>
                 <div class="mx-10"></div>
+<<<<<<< HEAD
                 <div class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
                     <h1>Create a Post</h1>
                     <div class="my-5"></div>
                     <a href="" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2" >Create</a>
+=======
+                <div
+                    class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
+                    <h1>Create a Personal</h1>
+                    <div class="my-5"></div>
+                    {{-- <a href="{{ url('dashboard/personal/create') }}" --}}
+                    <a href="{{ route('personal.create') }}"
+                        class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">Create</a>
+                </div>
+                <div class="mx-10"></div>
+                <div
+                    class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
+                    <h1>Create a Reminder</h1>
+                    <div class="my-5"></div>
+                    <a href="{{ route('reminder.create') }}" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">Create</a>
+                </div>
+                <div class="mx-10"></div>
+                <div
+                    class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
+                    <h1>Create a Todo</h1>
+                    <div class="my-5"></div>
+                    <a href="{{ route('todo.create') }}" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">Create</a>
+>>>>>>> c8ba05ee3d0a930f85d1996ec1f52e2b4823e15e
                 </div>
             </div>
 
 
 
-        <div class="my-5"></div>
-        <div id="home" class="bg-gray-400" style="display: block">
-            <section class="text-gray-600 body-font">
-                <div class="container px-5 py-10 mx-auto max-w-7x1">
-                    <div class="flex flex-wrap w-full mb-4 p-4">
-                        <div class="w-full mb-6 lg:mb-0">
-                            <h1 class="sm:text-4xl text-5xl font-bold title-font mb-2 text-gray-900">To Do List</h1>
-                            <div class="h-1 w-20 bg-indigo-500 rounded"></div>
-
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap -m-4">
-                        <div class="xl:w-1/3 md:w-1/2 p-4">
-                            <div class="bg-white p-6 rounded-lg">
-                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian</h2>
-                                <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                <div class="my-5 space-x-1.5">
-                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+            {{-- <div class="my-5"></div> --}}
+            <div id="home" class="bg-gray-400" style="display: block">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="container px-5 py-8 mx-auto max-w-7x1">
+                                <div class="flex flex-wrap w-full mb-4 p-4">
+                                    <div class="w-full mb-6 lg:mb-0">
+                                        <h1 class="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900">Todo List
+                                        </h1>
+                                        <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="mt-4">
-                              <div class="overflow-x-scroll overflow-y-hidden whitespace-nowrap">
-                                    <div class="inline-block">
-                                        <div class="xl:w-1/3 md:w-1/2 p-4">
-                                            <div class="bg-white p-6 rounded-lg">
-                                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                                </h2>
-                                                <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                    waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                                <div class="my-5 space-x-1.5">
-                                                    <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                    <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                                </div>
+                                <div class="flex flex-wrap -m-4">
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
                                             </div>
+                                        </div>
                                     </div>
-                              </div>
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="container px-5 py-8 mx-auto max-w-7x1">
+                                <div class="flex flex-wrap w-full mb-4 p-4">
+                                    <div class="w-full mb-6 lg:mb-0">
+                                        <h1 class="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900">Reminder List
+                                        </h1>
+                                        <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap -m-4">
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="container px-5 py-8 mx-auto max-w-7x1">
+                                <div class="flex flex-wrap w-full mb-4 p-4">
+                                    <div class="w-full mb-6 lg:mb-0">
+                                        <h1 class="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900">Personal
+                                        </h1>
+                                        <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap -m-4">
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                        <div class="bg-white p-6 rounded-lg">
+                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
+                                            </h2>
+                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
+                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                            <div class="my-5 space-x-1.5">
+                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
 
-                    <div class="container px-5 py-8 mx-auto max-w-7x1">
-                        <div class="flex flex-wrap w-full mb-4 p-4">
-                            <div class="w-full mb-6 lg:mb-0">
-                                <h1 class="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900">Reminder List
-                                </h1>
-                                <div class="h-1 w-20 bg-indigo-500 rounded"></div>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap -m-4">
-                            <div class="xl:w-1/3 md:w-1/2 p-4">
-                                <div class="bg-white p-6 rounded-lg">
-                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                    </h2>
-                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                    <div class="my-5 space-x-1.5">
-                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="xl:w-1/3 md:w-1/2 p-4">
-                                <div class="bg-white p-6 rounded-lg">
-                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                    </h2>
-                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                    <div class="my-5 space-x-1.5">
-                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="xl:w-1/3 md:w-1/2 p-4">
-                                <div class="bg-white p-6 rounded-lg">
-                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                    </h2>
-                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                    <div class="my-5 space-x-1.5">
-                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="xl:w-1/3 md:w-1/2 p-4">
-                                <div class="bg-white p-6 rounded-lg">
-                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                    </h2>
-                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                    <div class="my-5 space-x-1.5">
-                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="xl:w-1/3 md:w-1/2 p-4">
-                                <div class="bg-white p-6 rounded-lg">
+                <!-- Swiper JS -->
+                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                <script>
+                    var swiper = new Swiper('.mySwiper', {
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                    });
+                </script>
 
-                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                    </h2>
-                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                    <div class="my-5 space-x-1.5">
-                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="xl:w-1/3 md:w-1/2 p-4">
-                                <div class="bg-white p-6 rounded-lg">
-                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                    </h2>
-                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                    <div class="my-5 space-x-1.5">
-                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container px-5 py-8 mx-auto max-w-7x1">
-                        <div class="flex flex-wrap w-full mb-4 p-4">
-                            <div class="w-full mb-6 lg:mb-0">
-                                <h1 class="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900">Personal List
-                                </h1>
-                                <div class="h-1 w-20 bg-indigo-500 rounded"></div>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap -m-4">
-                            <div class="xl:w-1/3 md:w-1/2 p-4">
-                                <div class="bg-white p-6 rounded-lg">
-                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                    </h2>
-                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                    <div class="my-5 space-x-1.5">
-                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="xl:w-1/3 md:w-1/2 p-4">
-                                <div class="bg-white p-6 rounded-lg">
-                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                    </h2>
-                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                    <div class="my-5 space-x-1.5">
-                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="xl:w-1/3 md:w-1/2 p-4">
-                                <div class="bg-white p-6 rounded-lg">
-                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                    </h2>
-                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                    <div class="my-5 space-x-1.5">
-                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="xl:w-1/3 md:w-1/2 p-4">
-                                <div class="bg-white p-6 rounded-lg">
-                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                    </h2>
-                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                    <div class="my-5 space-x-1.5">
-                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="xl:w-1/3 md:w-1/2 p-4">
-                                <div class="bg-white p-6 rounded-lg">
-                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                    </h2>
-                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                    <div class="my-5 space-x-1.5">
-                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="xl:w-1/3 md:w-1/2 p-4">
-                                <div class="bg-white p-6 rounded-lg">
-                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                    </h2>
-                                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                        waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                    <div class="my-5 space-x-1.5">
-                                        <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                        <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
             </div>
 
             <div id="profile" style="display: none">
 
-            <!-- Profile Display -->
- 
+                <!-- Profile Display -->
 
-{{-- {{-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> --}}
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
                 {{-- {{-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> --}}
                 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
 
-<div class="">
- <div class="w-full text-white">
-        <div x-data="{ open: false }"
-            class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-            <div class="p-4 flex flex-row items-center justify-between">
-                {{-- <a href="#"
-                    class="text-lg font-semibold tracking-widest uppercase rounded-lg focus:outline-none focus:shadow-outline">example
-                    profile</a> --}}
-                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-                        <path x-show="!open" fill-rule="evenodd"
-                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                            clip-rule="evenodd"></path> 
-                        <path x-show="open" fill-rule="evenodd"
-                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-            </div>
-           
-        </div>
-    </div>
-    <!-- End of Navbar -->
 
-    <div class="container mx-auto my-5 p-5">
-        <div class="md:flex no-wrap md:-mx-2 ">
-            <!-- Left Side -->
-            <div class="w-full md:w-3/12 md:mx-2">
-                <!-- Profile Card -->
-               
-                <form method="post" enctype="multipart/form-data" id="imageChanger" action="{{ route('profile') }}">
-                    @csrf
-                    <label>
-                        <input name="profilePicture" class="hidden" id="file"
-                               type="file" {{--onchange="changeImage(event)"--}}/>
-                        <img id="output" src="{{ $User->profile_picture }}"
-                             class="mb-20 h-56 w-56 object-cover rounded-full">
-                    </label>
-                </form>
-                
-                <!-- End of profile card -->
-                <div class="my-4"></div>
-               </div>
-            <!-- Right Side -->
-            <div class="w-full md:w-9/12 mx-2 h-64">
-                <!-- Profile tab -->
-                <!-- About Section -->
-                <div class="bg-white p-3 shadow-sm rounded-sm">
-                    <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
-                        <span clas="text-green-500">
-                            <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                            </svg>
-                        </span>
-                        <span class="tracking-wide">About</span>
-                    </div>
-                    <div class="text-gray-700">
-                        <div class="grid md:grid-cols-2 text-sm">
-                            <div class="grid grid-cols-2">
-                                <div class="px-4 py-2 font-semibold">Name:</div>
-                                <div class="px-4 py-2">{{ Auth::user()->name }}</div>
-                            </div>
-                            <div class="text-gray-700">
-                                <div class="grid md:grid-cols-2 text-sm">
-                                    <div class="grid grid-cols-2">
-                                        <div class="px-4 py-2 font-semibold">Email:</div>
-                                        <div class="px-4 py-2">{{ Auth::user()->email }}</div>
-                                    </div>
-                           
-                            </div>
+                <div class="bg-gray-400 w-auto text-center text-white p-5">
+                    <div class=" w-full text-white">
+                    <div x-data="{ open: false }"
+                        class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+                        <div class="p-4 flex flex-row items-center justify-between">
+                            <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
+                                @click="open = !open">
+                                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                                    <path x-show="!open" fill-rule="evenodd"
+                                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                                        clip-rule="evenodd"></path>
+                                    <path x-show="open" fill-rule="evenodd"
+                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
                         </div>
 
                     </div>
-                    <button 
-                        class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Edit</button>
                 </div>
                 <!-- End of Navbar -->
 
-                <div class="container mx-auto my-5 p-5">
-                    <div class="md:flex no-wrap md:-mx-2 ">
+                <div class="bg-black rounded-2xl container mx-auto my-5 p-5">
+                    <div class="md:flex no-wrap my-5 md:-mx-2 ">
                         <!-- Left Side -->
                         <div class="w-full md:w-3/12 md:mx-2">
                             <!-- Profile Card -->
@@ -373,7 +412,7 @@
                             <div class="my-4"></div>
                         </div>
                         <!-- Right Side -->
-                        <div class="w-full md:w-9/12 mx-2 h-64">
+                        <div class="w-full my-8 md:w-6/12 mx-5   h-64">
                             <!-- Profile tab -->
                             <!-- About Section -->
                             <div class="bg-white p-3 shadow-sm rounded-2xl mb-10">
@@ -391,7 +430,55 @@
                                             class="w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Edit</button>
                                     </span>
                                 </div>
-                       
+                                <div class="text-gray-700">
+                                    <div id="editProfile" class="grid md:grid-cols-2 text-sm" style="display: none">
+                                        <form action="{{ route('dashboard.edit', Auth::user()->id) }}" method="POST">
+                                            @csrf
+                                            <div class="flex-wrap block">
+                                                <div class="flex-col">
+                                                    <div class="px-4 py-2">
+                                                        <input type="text" name="name" class="border form-input"
+                                                            placeholder="NAME">
+                                                        @error('name')
+                                                            <span>{{ $message }}</span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+                                                <div class="flex-col">
+                                                    <div class="px-4 py-2">
+                                                        <input type="text" name="email" class="border form-input"
+                                                            placeholder="EMAIL">
+                                                        @error('email')
+                                                            <span>{{ $message }}</span>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="gap-2">
+                                                        <button
+                                                            class="text-sm rounded-lg hover:bg-gray-200 focus:outline-none focus:shadow-outline focus:bg-gray-200 hover:shadow-xs p-3 my-4">Change</button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div id="change" class=" flex flex-row items-center text-sm ">
+                                         <div class="flex  w-full  flex-col">
+                                            <div class="px-4 py-2 font-semibold">Name:</div>
+                                            <div class="px-4 py-2">{{ Auth::user()->name }}</div>
+                                         </div>
+                                        <div class="text-gray-700  w-full ">
+                                            <div class=" text-sm">
+                                                <div class="flex flex-col">
+                                                    <div class="px-4 py-2 font-semibold">Email:</div>
+                                                    <div class="px-4 py-2">{{ Auth::user()->email }}</div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
 
@@ -401,8 +488,6 @@
 
                     <!-- End of profile tab -->
                 </div>
-                <button 
-                    class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Edit</button>
             </div>
         </div>
     </div>
@@ -412,13 +497,25 @@
     </div>
     <div id="settings" style="display: none">
         <!-- Settings Display -->
-        <h1 class="text-3xl font-bold">Settings</h1>
-        <div class="flex flex-col items-center justify-center mt-1/12 mb-2 overflow-hidden">
-            <h1 class="text-3xl text-center">Deactivate Button</h1>
-            <div class="w-2/6">
-                <a href="#"
-                    class="text-center bg-black hover:text-red-600 block w-full p-5 my-2 text-sm font-semibold text-white rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline  hover:shadow-xs">
-                    Deactivate</a>
+        <div class="bg-gray-600">
+            <h1 class="text-3xl font-bold">Settings</h1>
+            <div class="flex flex-wrap space-x-80 justify-center items-center">
+                    <div class="flex flex-col items-center justify-center mt-1/12 mb-2 overflow-hidden">
+                        <h1 class="text-3xl text-center font-bold">Deactivate Button</h1>
+                        <div class="w-4/6">
+                            <a href="#"
+                                class="text-center bg-black hover:text-red-600 block w-full p-5 my-2 text-sm font-semibold text-white rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline  hover:shadow-xs">
+                                Deactivate</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center mt-1/12 mb-2 overflow-hidden">
+                        <h1 class="text-3xl text-center font-bold">Contact Button</h1>
+                        <div class="w-4/6">
+                            <a href="#"
+                               class="text-center bg-black hover:text-red-600 block w-full p-5 my-2 text-sm font-semibold text-white rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline  hover:shadow-xs">
+                                Contact</a>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
@@ -437,8 +534,8 @@
 
             $("#file").on('change', function(event) {
 
- 
-</div>
+                let image = $("#output")[0];
+                image.src = URL.createObjectURL(event.target.files[0]);
 
                 imageChangerForm.submit()
 

@@ -159,17 +159,7 @@
             </div>
             <div class="px-5 py-2">
                 <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Blog
-                </a>
-            </div>
-            <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
                     Team
-                </a>
-            </div>
-            <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Pricing
                 </a>
             </div>
             <div class="px-5 py-2">
@@ -216,7 +206,7 @@
             </a>
         </div>
         <p class="mt-8 text-base leading-6 text-center text-gray-400">
-            © 2021 SomeCompany, Inc. All rights reserved.
+            © 2021 AmberAcademy, Inc. All rights reserved.
         </p>
     </div>
 </section>
