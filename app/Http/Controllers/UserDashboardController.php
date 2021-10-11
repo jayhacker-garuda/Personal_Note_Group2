@@ -15,8 +15,6 @@ class UserDashboardController extends Controller
     }
     public function index()
     {
-        $User = User::find(Auth::id())->first();
-
-        return view('dashboard.index',compact('User'));
+        return view('dashboard.index');
     }
 }

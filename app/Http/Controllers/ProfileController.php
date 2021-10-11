@@ -12,30 +12,42 @@ class ProfileController extends Controller
 {
     public function ppUpdate (Request $request) {
 
-        $path = 'public/media';
+        // $path = 'storage/media';
 
         $this->validate($request,[
-            'profilePicture' => 'required|image|max:10000'
+            'profilePicture' => 'required|image|max:10000|mimes:jpg,png,jpeg'
         ]);
 
 
-        $currentImage =  uniqid('', true) . "." . $request->file("profilePicture")->getClientOriginalExtension();
+        $filename = $request->file('profilePicture')->getClientOriginalName();
 
-        $saveImage = $request->file("profilePicture")->storeAs($path, $currentImage);
+        $request->file("profilePicture")->storeAs('media', $filename,'public');
 
 
         $updateImage = User::find(Auth::id())->first()->update([
-            'profile_picture' => $path."/".$currentImage
+            'profile_picture' => $filename
         ]);
 
         return redirect()->back();
-        // dd($request->all());
-        // return view('//dashboard');
+        
     }
 
-    public function edit () {
+    public function edit (Request $request, $id) {
+        
+        $request->validate([
+           'name' => 'required',
+           'email' => 'required'
+        ]);
 
-        return redirect()->back();
+        // dd($request);
+
+        if($request->method === 'POST'){
+            User::where('id', $id)->update([
+               'name' => $request->name,
+               'email' => $request->email 
+            ]);
+            return redirect()->back();
+        }
 
     }
 
