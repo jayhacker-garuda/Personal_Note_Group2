@@ -39,7 +39,7 @@
             <div class="flex flex-wrap mb-20 items-center justify-center" style="margin-top: -14%">
                 <div
                     class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
-                    <h1>View others post</h1>
+                     <h1>View others post</h1>
                     <div class="my-5"></div>
                     <a href="" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">view</a>
                 </div>
@@ -276,7 +276,7 @@
 
 
 
-                <div class="">
+                <div class="bg-gray-400 w-auto text-center text-white p-5">
                     <div class=" w-full text-white">
                         <div x-data="{ open: false }"
                             class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
@@ -405,13 +405,25 @@
     </div>
     <div id="settings" style="display: none">
         <!-- Settings Display -->
-        <h1 class="text-3xl font-bold">Settings</h1>
-        <div class="flex flex-col items-center justify-center mt-1/12 mb-2 overflow-hidden">
-            <h1 class="text-3xl text-center">Deactivate Button</h1>
-            <div class="w-2/6">
-                <a href="#"
-                    class="text-center bg-black hover:text-red-600 block w-full p-5 my-2 text-sm font-semibold text-white rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline  hover:shadow-xs">
-                    Deactivate</a>
+        <div class="bg-gray-600">
+            <h1 class="text-3xl font-bold">Settings</h1>
+            <div class="flex flex-wrap space-x-80 justify-center items-center">
+                    <div class="flex flex-col items-center justify-center mt-1/12 mb-2 overflow-hidden">
+                        <h1 class="text-3xl text-center font-bold">Deactivate Button</h1>
+                        <div class="w-4/6">
+                            <a href="#"
+                                class="text-center bg-black hover:text-red-600 block w-full p-5 my-2 text-sm font-semibold text-white rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline  hover:shadow-xs">
+                                Deactivate</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center mt-1/12 mb-2 overflow-hidden">
+                        <h1 class="text-3xl text-center font-bold">Contact Button</h1>
+                        <div class="w-4/6">
+                            <a href="{{ route('contact-us.create') }}"
+                               class="text-center bg-black hover:text-red-600 block w-full p-5 my-2 text-sm font-semibold text-white rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline  hover:shadow-xs">
+                                Contact</a>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
