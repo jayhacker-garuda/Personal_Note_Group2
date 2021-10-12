@@ -14,10 +14,10 @@ class NoteCategorySeeder extends Seeder
     public function run()
     {
         \App\Models\NoteCategory::create([
-            'name' => 'public'
+            'name' => 'Public'
         ]);
         \App\Models\NoteCategory::create([
-            'name' => 'private'
+            'name' => 'Private'
         ]);
     }
 }
