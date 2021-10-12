@@ -73,12 +73,8 @@ Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 // Todo, Reminder and Personal
 Route::resource('dashboard/personal', PersonalController::class);
 Route::resource('dashboard/reminder', ReminderController::class);
-<<<<<<< HEAD
 Route::resource('dashboard/todo', TodoController::class);
 
 // Contact Controller
 Route::get('/contact-us/create', [ContactController::class, 'get_contact'])->name('contact-us.create');
 Route::post('/contact-us/store', [ContactController::class, 'store_contact'])->name('contact-us.store');
-=======
-Route::resource('dashboard/todo', TodoController::class);
->>>>>>> 332c309cef16869a5fc5b83b0c2700b4afab0c90
