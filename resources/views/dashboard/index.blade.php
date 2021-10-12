@@ -34,7 +34,7 @@
             <div class="flex flex-wrap mb-20 items-center justify-center" style="margin-top: -14%">
                 <div
                     class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
-                    <h1>View others post</h1>
+                     <h1>View others post</h1>
                     <div class="my-5"></div>
                     <a href="" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">view</a>
                 </div>
@@ -293,11 +293,11 @@
                     </div>
                     <!-- End of Navbar -->
 
-                <div class="bg-black rounded-2xl w-9/12 container mx-auto my-5 p-5">
-                    <div class="md:flex no-wrap  md:-mx-2 ">
-                        <!-- Left Side -->
-                        <div class="w-full md:w-3/12 md:mx-2">
-                            <!-- Profile Card -->
+                    <div class="container mx-auto my-5 p-5">
+                        <div class="md:flex no-wrap md:-mx-2 ">
+                            <!-- Left Side -->
+                            <div class="w-full md:w-3/12 md:mx-2">
+                                <!-- Profile Card -->
 
                                 <form method="post" enctype="multipart/form-data" id="imageChanger"
                                     action="{{ route('profile') }}">
@@ -311,40 +311,41 @@
                                     </label>
                                 </form>
 
-                            <!-- End of profile card -->
-                            <div class="my-4"></div>
-                        </div>
-                        <!-- Right Side -->
-                        <div class="w-full md:w-9/12 mx-2 h-64">
-                            <!-- Profile tab -->
-                            <!-- About Section -->
-                            <div class="bg-white p-3 shadow-sm rounded-2xl mb-10">
-                                <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
-                                    <span clas="text-green-500">
-                                        <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                        </svg>
-                                    </span>
-                                    <span class="tracking-wide">About</span>
-                                    <span>
-                                        <button onclick="switchDiv()" id="editBtn"
-                                            class="w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Edit</button>
-                                    </span>
-                                </div>
-                                <div class="text-gray-700">
-                                    <div id="editProfile" class="grid md:grid-cols-2 text-sm" style="display: none">
-                                        <form action="{{ route('dashboard.edit', Auth::user()->id) }}" method="POST">
-                                            @csrf
-                                            <div class="flex-row">
-                                                <div class="flex-col">
-                                                    <div class="px-4 py-2">
-                                                        <input type="text" name="name" class="border form-input"
-                                                            placeholder="NAME">
-                                                        @error('name')
-                                                            <span>{{ $message }}</span>
-                                                        @enderror
+                                <!-- End of profile card -->
+                                <div class="my-4"></div>
+                            </div>
+                            <!-- Right Side -->
+                            <div class="w-full md:w-9/12 mx-2 h-64">
+                                <!-- Profile tab -->
+                                <!-- About Section -->
+                                <div class="bg-white p-3 shadow-sm rounded-2xl mb-10">
+                                    <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
+                                        <span clas="text-green-500">
+                                            <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                            </svg>
+                                        </span>
+                                        <span class="tracking-wide">About</span>
+                                        <span>
+                                            <button onclick="switchDiv()" id="editBtn"
+                                                class="w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Edit</button>
+                                        </span>
+                                    </div>
+                                    <div class="text-gray-700">
+                                        <div id="editProfile" class="grid md:grid-cols-2 text-sm" style="display: none">
+                                            <form action="{{ route('dashboard.edit', Auth::user()->id) }}" method="POST">
+                                                @csrf
+                                                <div class="flex-row">
+                                                    <div class="flex-col">
+                                                        <div class="px-4 py-2">
+                                                            <input type="text" name="name" class="border form-input"
+                                                                placeholder="NAME">
+                                                            @error('name')
+                                                                <span>{{ $message }}</span>
+                                                            @enderror
+                                                        </div>
                                                     </div>
                                                     <div class="flex-col">
                                                         <div class="px-4 py-2">
@@ -360,20 +361,20 @@
                                                         </div>
                                                     </div>
 
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div id="change" class="grid md:grid-cols-2 text-sm" style="display: block">
-                                        {{-- <div class="grid grid-cols-2"> --}}
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div id="change" class="grid md:grid-cols-2 text-sm" style="display: block">
+                                            {{-- <div class="grid grid-cols-2"> --}}
                                             <div class="px-4 py-2 font-semibold">Name:</div>
                                             <div class="px-4 py-2">{{ Auth::user()->name }}</div>
-                                        {{-- </div> --}}
-                                        <div class="text-gray-700">
-                                            <div class="grid md:grid-cols-2 text-sm">
-                                                <div class="grid grid-cols-2">
-                                                    <div class="px-4 py-2 font-semibold">Email:</div>
-                                                    <div class="px-4 py-2">{{ Auth::user()->email }}</div>
-                                                </div>
+                                            {{-- </div> --}}
+                                            <div class="text-gray-700">
+                                                <div class="grid md:grid-cols-2 text-sm">
+                                                    <div class="grid grid-cols-2">
+                                                        <div class="px-4 py-2 font-semibold">Email:</div>
+                                                        <div class="px-4 py-2">{{ Auth::user()->email }}</div>
+                                                    </div>
 
                                                 </div>
                                             </div>
@@ -413,7 +414,7 @@
                     <div class="flex flex-col items-center justify-center mt-1/12 mb-2 overflow-hidden">
                         <h1 class="text-3xl text-center font-bold">Contact Button</h1>
                         <div class="w-4/6">
-                            <a href="#"
+                            <a href="{{ route('contact-us.create') }}"
                                class="text-center bg-black hover:text-red-600 block w-full p-5 my-2 text-sm font-semibold text-white rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline  hover:shadow-xs">
                                 Contact</a>
                         </div>
