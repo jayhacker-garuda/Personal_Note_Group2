@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,6 +27,10 @@ class AdminLoginController extends Controller
 
             if (Auth::user()->user_type === 'admin') {
 
+
+                User::where('id', Auth::user()->id)->update([
+                    'status' => 'active'
+                ]);
                 return redirect()->route('admin.index')->with('success', '.....');
             } else {
                 return redirect()->route('admin.adminLogin')->with('error', '❌❌❌');

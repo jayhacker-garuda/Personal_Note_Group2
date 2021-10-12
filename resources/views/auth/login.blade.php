@@ -50,11 +50,7 @@
                         <div class="">
                             <button class=" mt-4 mb-3 w-full bg-black
                            text-white py-4 rounded-md transition duration-100">Login now</button>
-                            {{-- <div class="flex  space-x-2 justify-center items-end bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100""> --}}
-
-                            {{-- <img class=" h-5 cursor-pointer" src="https://i.imgur.com/arC60SB.png" alt=""> --}}
-                            {{-- <button >Or sign-in with google</button> --}}
-                            {{-- </div> --}}
+                            
                         </div>
                     </form>
                     <p class="mt-2"> Dont have an account? <span class="cursor-pointer text-sm text-blue-600"> <a
@@ -73,11 +69,11 @@
         <script>
             Swal.fire({
                 icon: 'success',
-                title: 'Welcome Admin',
+                title: 'Please Login',
                 text: '🤘🏾💀🤘🏾',
                 // footer: '<a href="">Why do I have this issue?</a>'
             })
         </script>
     @endif
->>>>>>> 2c8017bde446176cd7743c54504a654d50f568f7
+
 @endsection
