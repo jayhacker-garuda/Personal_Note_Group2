@@ -5,15 +5,12 @@
 @endsection
 
 @section('content')
-{{--    <link--}}
-{{--        href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"--}}
-{{--        rel="stylesheet"--}}
-{{--    />--}}
+    {{-- <link --}}
+    {{-- href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" --}}
+    {{-- rel="stylesheet" --}}
+    {{-- /> --}}
     <!--  Swiper's CSS -->
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <div class="h-full">
         <div class="py-2 flex">
             <div class="p-2 space-x-1.5 mt-12">
@@ -60,14 +57,16 @@
                     class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
                     <h1>Create a Reminder</h1>
                     <div class="my-5"></div>
-                    <a href="{{ route('reminder.create') }}" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">Create</a>
+                    <a href="{{ route('reminder.create') }}"
+                        class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">Create</a>
                 </div>
                 <div class="mx-10"></div>
                 <div
                     class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
                     <h1>Create a Todo</h1>
                     <div class="my-5"></div>
-                    <a href="{{ route('todo.create') }}" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">Create</a>
+                    <a href="{{ route('todo.create') }}"
+                        class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">Create</a>
                 </div>
             </div>
 
@@ -87,79 +86,52 @@
                                     </div>
                                 </div>
                                 <div class="flex flex-wrap -m-4">
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                                    @forelse ($todoNote as $tnote )
+                                        <div class="xl:w-1/3 md:w-1/2 p-4">
                                         <div class="bg-white p-6 rounded-lg">
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
-                                        <div class="bg-white p-6 rounded-lg">
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
-                                        <div class="bg-white p-6 rounded-lg">
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
-                                        <div class="bg-white p-6 rounded-lg">
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
-                                        <div class="bg-white p-6 rounded-lg">
+                                            <div class="flex justify-between">
+                                                
+                                                <div>
+                                                        <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{ $tnote->todo_date }}
+                                                        </h2>
 
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                                                    </div>
+                                                    <div>
+                                                        @if ($tnote->noteCategory->name === 'Private')
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                                                    stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2"
+                                                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                                                </svg>
+                                                            </span>
+                                                        @else
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                                                    stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2"
+                                                                        d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                                                                </svg>
+                                                            </span>
+                                                        @endif
+                                                        <span
+                                                            class="text-gray-300">{{ $tnote->noteCategory->name }}</span>
+                                                    </div>
+                                                </div>
+                                            <p class="leading-relaxed text-base">{{ $tnote->todo }}</p>
                                             <div class="my-5 space-x-1.5">
                                                 <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
                                                 <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
-                                        <div class="bg-white p-6 rounded-lg">
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @empty
+                                        
+                                    @endforelse
                                 </div>
                             </div>
                         </div>
@@ -167,84 +139,58 @@
                             <div class="container px-5 py-8 mx-auto max-w-7x1">
                                 <div class="flex flex-wrap w-full mb-4 p-4">
                                     <div class="w-full mb-6 lg:mb-0">
-                                        <h1 class="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900">Reminder List
+                                        <h1 class="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900">Reminder
+                                            List
                                         </h1>
                                         <div class="h-1 w-20 bg-indigo-500 rounded"></div>
                                     </div>
                                 </div>
                                 <div class="flex flex-wrap -m-4">
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
-                                        <div class="bg-white p-6 rounded-lg">
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                    @foreach ($reminderNote as $rnote)
+                                        <div class="xl:w-1/3 md:w-1/2 p-4">
+                                            <div class="bg-white p-6 rounded-lg">
+                                                <div class="flex justify-between">
+
+                                                    <div>
+                                                        <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+                                                            {{ $rnote->reminder_date }}
+                                                        </h2>
+
+                                                    </div>
+                                                    <div>
+                                                        @if ($rnote->noteCategory->name === 'Private')
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                                                    stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2"
+                                                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                                                </svg>
+                                                            </span>
+                                                        @else
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                                                    stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2"
+                                                                        d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                                                                </svg>
+                                                            </span>
+                                                        @endif
+                                                        <span
+                                                            class="text-gray-300">{{ $rnote->noteCategory->name }}</span>
+                                                    </div>
+                                                </div>
+                                                <p class="leading-relaxed text-base">{{ $rnote->remind_about }}</p>
+                                                <div class="my-5 space-x-1.5">
+                                                    <a href="#" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                    <a href="#" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
-                                        <div class="bg-white p-6 rounded-lg">
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
-                                        <div class="bg-white p-6 rounded-lg">
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
-                                        <div class="bg-white p-6 rounded-lg">
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
-                                        <div class="bg-white p-6 rounded-lg">
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
-                                        <div class="bg-white p-6 rounded-lg">
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -258,79 +204,47 @@
                                     </div>
                                 </div>
                                 <div class="flex flex-wrap -m-4">
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
-                                        <div class="bg-white p-6 rounded-lg">
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                    @foreach ($personalNote as $pnote)
+                                        <div class="xl:w-1/3 md:w-1/2 p-4">
+                                            <div class="bg-white p-6 rounded-lg">
+                                                <div class="flex justify-between">
+                                                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+                                                        {{ $pnote->title }}
+                                                    </h2>
+                                                    <div>
+                                                        @if ($pnote->noteCategory->name === 'Private')
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                                                    stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2"
+                                                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                                                </svg>
+                                                            </span>
+                                                        @else
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                                                    stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2"
+                                                                        d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                                                                </svg>
+                                                            </span>
+                                                        @endif
+                                                        <span
+                                                            class="text-gray-300">{{ $pnote->noteCategory->name }}</span>
+                                                    </div>
+                                                </div>
+                                                <p class="leading-relaxed text-base">{{ $pnote->description }}</p>
+                                                <div class="my-5 space-x-1.5">
+                                                    <a href="#" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                    <a href="#" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
-                                        <div class="bg-white p-6 rounded-lg">
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
-                                        <div class="bg-white p-6 rounded-lg">
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
-                                        <div class="bg-white p-6 rounded-lg">
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
-                                        <div class="bg-white p-6 rounded-lg">
-
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="xl:w-1/3 md:w-1/2 p-4">
-                                        <div class="bg-white p-6 rounded-lg">
-                                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fingerstache flexitarian
-                                            </h2>
-                                            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit
-                                                waistcoat. Distillery hexagon disrupt edison bulbche.</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -364,25 +278,25 @@
                 </div>
                 <div class="bg-gray-400 w-auto text-center text-white p-5">
                     <div class=" w-full text-white">
-                    <div x-data="{ open: false }"
-                        class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-                        <div class="p-4 flex flex-row items-center justify-between">
-                            <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
-                                @click="open = !open">
-                                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-                                    <path x-show="!open" fill-rule="evenodd"
-                                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                                        clip-rule="evenodd"></path>
-                                    <path x-show="open" fill-rule="evenodd"
-                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                        </div>
+                        <div x-data="{ open: false }"
+                            class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+                            <div class="p-4 flex flex-row items-center justify-between">
+                                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
+                                    @click="open = !open">
+                                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                                        <path x-show="!open" fill-rule="evenodd"
+                                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                                            clip-rule="evenodd"></path>
+                                        <path x-show="open" fill-rule="evenodd"
+                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
 
+                        </div>
                     </div>
-                </div>
-                <!-- End of Navbar -->
+                    <!-- End of Navbar -->
 
                 <div class="bg-black rounded-2xl w-9/12 container mx-auto my-5 p-5">
                     <div class="md:flex no-wrap  md:-mx-2 ">
@@ -390,22 +304,23 @@
                         <div class="w-full md:w-3/12 md:mx-2">
                             <!-- Profile Card -->
 
-                            <form method="post" enctype="multipart/form-data" id="imageChanger"
-                                action="{{ route('profile') }}">
-                                @csrf
-                                <label>
-                                    <input name="profilePicture" class="hidden" id="file" type="file"
-                                        {{-- onchange="changeImage(event)" --}} />
-                                    <img id="output" src="{{ url('/storage/media/' . Auth::user()->profile_picture) }}"
-                                        class="mb-20 h-56 w-56 object-cover rounded-full">
-                                </label>
-                            </form>
+                                <form method="post" enctype="multipart/form-data" id="imageChanger"
+                                    action="{{ route('profile') }}">
+                                    @csrf
+                                    <label>
+                                        <input name="profilePicture" class="hidden" id="file" type="file"
+                                            {{-- onchange="changeImage(event)" --}} />
+                                        <img id="output"
+                                            src="{{ url('/storage/media/' . Auth::user()->profile_picture) }}"
+                                            class="mb-20 h-56 w-56 object-cover rounded-full">
+                                    </label>
+                                </form>
 
                             <!-- End of profile card -->
                             <div class="my-4"></div>
                         </div>
                         <!-- Right Side -->
-                        <div class="w-full my-8 md:w-/12 mx-10   h-64">
+                        <div class="w-full md:w-9/12 mx-2 h-64">
                             <!-- Profile tab -->
                             <!-- About Section -->
                             <div class="bg-white p-3 shadow-sm rounded-2xl mb-10">
@@ -427,7 +342,7 @@
                                     <div id="editProfile" class="grid md:grid-cols-2 text-sm" style="display: none">
                                         <form action="{{ route('dashboard.edit', Auth::user()->id) }}" method="POST">
                                             @csrf
-                                            <div class="flex-wrap block">
+                                            <div class="flex-row">
                                                 <div class="flex-col">
                                                     <div class="px-4 py-2">
                                                         <input type="text" name="name" class="border form-input"
@@ -436,54 +351,53 @@
                                                             <span>{{ $message }}</span>
                                                         @enderror
                                                     </div>
-                                                </div>
-                                                <div class="flex-col">
-                                                    <div class="px-4 py-2">
-                                                        <input type="text" name="email" class="border form-input"
-                                                            placeholder="EMAIL">
-                                                        @error('email')
-                                                            <span>{{ $message }}</span>
-                                                        @enderror
+                                                    <div class="flex-col">
+                                                        <div class="px-4 py-2">
+                                                            <input type="text" name="email" class="border form-input"
+                                                                placeholder="EMAIL">
+                                                            @error('email')
+                                                                <span>{{ $message }}</span>
+                                                            @enderror
+                                                        </div>
+                                                        <div class="gap-2">
+                                                            <button
+                                                                class="text-sm rounded-lg hover:bg-gray-200 focus:outline-none focus:shadow-outline focus:bg-gray-200 hover:shadow-xs p-3 my-4">Change</button>
+                                                        </div>
                                                     </div>
-                                                    <div class="gap-2">
-                                                        <button
-                                                            class="text-sm rounded-lg hover:bg-gray-200 focus:outline-none focus:shadow-outline focus:bg-gray-200 hover:shadow-xs p-3 my-4">Change</button>
-                                                    </div>
-                                                </div>
 
                                             </div>
                                         </form>
                                     </div>
-                                    <div id="change" class=" flex flex-row items-center text-sm ">
-                                         <div class="flex  w-full  flex-col">
+                                    <div id="change" class="grid md:grid-cols-2 text-sm" style="display: block">
+                                        {{-- <div class="grid grid-cols-2"> --}}
                                             <div class="px-4 py-2 font-semibold">Name:</div>
                                             <div class="px-4 py-2">{{ Auth::user()->name }}</div>
-                                         </div>
-                                        <div class="text-gray-700  w-full ">
-                                            <div class=" text-sm">
-                                                <div class="flex flex-col">
+                                        {{-- </div> --}}
+                                        <div class="text-gray-700">
+                                            <div class="grid md:grid-cols-2 text-sm">
+                                                <div class="grid grid-cols-2">
                                                     <div class="px-4 py-2 font-semibold">Email:</div>
                                                     <div class="px-4 py-2">{{ Auth::user()->email }}</div>
                                                 </div>
 
+                                                </div>
                                             </div>
-                                        </div>
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+
                         </div>
+                        <!-- End of about section -->
+                        <!-- About Section  edit-->
 
-
+                        <!-- End of profile tab -->
                     </div>
-                    <!-- End of about section -->
-                    <!-- About Section  edit-->
-
-                    <!-- End of profile tab -->
                 </div>
             </div>
         </div>
-    </div>
 
     </div>
 
@@ -539,43 +453,54 @@
 
         });
     </script>
-    <script>
-
-
-        const slider = document.querySelector('.items');
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        slider.classList.add('active');
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-        });
-
-
-        slider.addEventListener('mouseleave', () => {
-        isDown = false;
-        slider.classList.remove('active');
-        });
-
-
-        slider.addEventListener('mouseup', () => {
-        isDown = false;
-        slider.classList.remove('active');
-        });
-
-
-        slider.addEventListener('mousemove', (e) => {
-        if(!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 3; //scroll-fast
-        slider.scrollLeft = scrollLeft - walk;
-        // console.log(walk);
-        });
-
-
-    </script>
+    @if (session()->has('personal-note'))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Personal Note Added',
+                text: '📝📝📝',
+                // footer: '<a href="">Why do I have this issue?</a>'
+            })
+        </script>
+    @endif
+    @if (session()->has('reminder-note'))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Reminder Note Added',
+                text: '📝📝📝',
+                // footer: '<a href="">Why do I have this issue?</a>'
+            })
+        </script>
+    @endif
+    @if (session()->has('todo-note'))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Todo Note Added',
+                text: '📝📝📝',
+                // footer: '<a href="">Why do I have this issue?</a>'
+            })
+        </script>
+    @endif
+    @if (session()->has('success'))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Welcome User',
+                text: '🤘🏾💀🤘🏾',
+                // footer: '<a href="">Why do I have this issue?</a>'
+            })
+        </script>
+    @endif
+    @if (session()->has('error'))
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'something went wrong',
+                text: '📝📝📝',
+                footer: '<a href="/contact-us">Why do I have this issue?</a>'
+            })
+        </script>
+    @endif
 @endsection
