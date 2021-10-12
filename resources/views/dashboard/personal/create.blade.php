@@ -46,14 +46,6 @@
                         <div class="flex p-1">
                             <select class="border-2 border-gray-300 border-r p-2" name="category_id">
                                 <option disabled selected>Note Permission</option>
-<<<<<<< HEAD
-                                @foreach ($noteCategory as $category )
-                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                    
-                                @endforeach
-                            </select>
-                            <button type="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Submit</button>
-=======
                                 @foreach ($noteCategory as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
 
@@ -69,7 +61,6 @@
                         <div class="mt-2">
                             <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400"
                             >Submit</button>
->>>>>>> 332c309cef16869a5fc5b83b0c2700b4afab0c90
                         </div>
                     </form>
                 </div>
