@@ -18,7 +18,6 @@
 @extends('layouts.default')
 @section('content')
 
-
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
 <section class="relative  bg-blueGray-50">
     <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
@@ -47,7 +46,8 @@
     <section class="pb-10 bg-gray-600 -mt-24">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap">
-                <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+                @if($tNote != null AND $pNote != null AND $rNote != null)
+                    <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
                     <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                         <div class="px-4 py-5 flex-auto">
                             <div class="text-black p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-gray-200">
@@ -60,7 +60,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-4/12 px-4 text-center">
+                
+                    <div class="w-full md:w-4/12 px-4 text-center">
                     <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                         <div class="px-4 py-5 flex-auto">
                             <div class="text-black p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-gray-200">
@@ -73,6 +74,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="pt-6 w-full md:w-4/12 px-4 text-center">
                     <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                         <div class="px-4 py-5 flex-auto">
@@ -89,6 +91,7 @@
                         </div>
                     </div>
                 </div>
+                @endif
             </div>
     </section>
 </section>
