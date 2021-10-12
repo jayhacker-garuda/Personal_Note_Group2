@@ -32,6 +32,7 @@ use Illuminate\Support\Facades\Route;
 // Main Routes no Auth
 Route::get('/', [MainController::class, 'index'])->name('main.index');
 Route::get('/contact-us', [MainController::class, 'contact'])->name('main.contact');
+Route::get('/team', [MainController::class, 'team'])->name('main.team');
 
 // Auth
 Route::get('/login', [LoginController::class, 'login'])->name('login');
@@ -47,7 +48,7 @@ Route::post('/admin/login', [AdminLoginController::class, 'loginAdmin'])->name('
 Route::middleware(['user_type'])->group(function () {
     // Admin Dashboard
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
-    
+
     // Create Note Category
     Route::get('/admin/note-category/create', [AdminController::class, 'createNoteCategory'])->name('admin.note-category.create');
     Route::post('/admin/note-category/store', [AdminController::class, 'storeNoteCategory'])->name('admin.note-category.store');
@@ -62,7 +63,7 @@ Route::middleware(['note_user'])->group(function(){
     Route::post('/ppUpdate', [ProfileController::class, 'ppUpdate'])->name('profile');
     Route::post('/dashboard/{name}/edit/', [ProfileController::class, 'edit'])->name('dashboard.edit');
 
-    
+
 });
 
 
