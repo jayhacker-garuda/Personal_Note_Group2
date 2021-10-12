@@ -27,6 +27,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+    
+        
         FacadesView::share('pNote', Personal::where('note_category_id', '=','1')->orderBy('created_at', 'desc')->first());
         FacadesView::share('rNote', Reminder::where('note_category_id', '=','1')->orderBy('created_at', 'desc')->first());
         FacadesView::share('tNote', Todo::where('note_category_id', '=','1')->orderBy('created_at', 'desc')->first());
