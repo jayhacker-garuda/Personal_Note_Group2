@@ -5,12 +5,7 @@
 @endsection
 
 @section('content')
-    {{-- <link --}}
-    {{-- href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" --}}
-    {{-- rel="stylesheet" --}}
-    {{-- /> --}}
-    <!--  Swiper's CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
     <div class="h-full">
         <div class="py-2 flex">
             <div class="p-2 space-x-1.5 mt-12">
@@ -429,7 +424,7 @@
     </div>
 @endsection
 @section('css')
-
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 @endsection
 @section('js')
     <script src="{{ asset('js/Dashboard/toggle.js') }}"></script>
