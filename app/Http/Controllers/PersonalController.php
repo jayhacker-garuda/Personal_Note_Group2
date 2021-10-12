@@ -41,10 +41,28 @@ class PersonalController extends Controller
      */
     public function store(Request $request)
     {
+        $data = $request->validate([
+            'note_category_id' => 'required',
+            'user_id' => 'required',
+            'title' => 'required',
+            'description' => 'required',
+        ]);
+        dd($data);
 
-        Personal::create($request->validated());
+        // Personal::create($request->input());
 
-        return redirect()->route('personal.index');
+        $personal                   = new Personal();
+        $personal->note_category_id = $request->category_id;
+        $personal->user_id          = $request->user_id;
+        $personal->title            = $request->title;
+        $personal->description      = $request->description;
+        $personal->save();
+
+        return $personal;
+      
+        return redirect()
+            ->route('personal.create')
+            ->with('message', 'Personal Noted Created!!!');
     }
 
     /**

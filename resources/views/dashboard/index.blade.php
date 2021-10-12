@@ -42,17 +42,11 @@
             <div class="flex flex-wrap mb-20 items-center justify-center" style="margin-top: -14%">
                 <div
                     class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
-                    <h1>View others post</h1>
+                     <h1>View others post</h1>
                     <div class="my-5"></div>
                     <a href="" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">view</a>
                 </div>
                 <div class="mx-10"></div>
-<<<<<<< HEAD
-                <div class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
-                    <h1>Create a Post</h1>
-                    <div class="my-5"></div>
-                    <a href="" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2" >Create</a>
-=======
                 <div
                     class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
                     <h1>Create a Personal</h1>
@@ -74,7 +68,6 @@
                     <h1>Create a Todo</h1>
                     <div class="my-5"></div>
                     <a href="{{ route('todo.create') }}" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">Create</a>
->>>>>>> c8ba05ee3d0a930f85d1996ec1f52e2b4823e15e
                 </div>
             </div>
 
@@ -511,7 +504,7 @@
                     <div class="flex flex-col items-center justify-center mt-1/12 mb-2 overflow-hidden">
                         <h1 class="text-3xl text-center font-bold">Contact Button</h1>
                         <div class="w-4/6">
-                            <a href="#"
+                            <a href="{{ route('contact-us.create') }}"
                                class="text-center bg-black hover:text-red-600 block w-full p-5 my-2 text-sm font-semibold text-white rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline  hover:shadow-xs">
                                 Contact</a>
                         </div>

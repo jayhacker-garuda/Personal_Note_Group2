@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Contact;
+
 class ContactController extends Controller
 {
     public function get_contact() {
@@ -11,11 +13,15 @@ class ContactController extends Controller
     }
 
     public function store_contact(Request $request) {
-        $contact = $request->validate([
-            '' => 'required',
-
+        $request->validate([
+            'name' => 'required',
+            'phone_number' => 'required',
+            'email' => 'required',
+            'describe' => 'required'
         ]);
 
-        
+        Contact::create($request->all());
+
+        return redirect()->route('main.index');
     }
 }

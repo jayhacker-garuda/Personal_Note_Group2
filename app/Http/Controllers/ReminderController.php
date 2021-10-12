@@ -39,9 +39,16 @@ class ReminderController extends Controller
      */
     public function store(Request $request)
     {
-        Reminder::create($request->validated());
+        $request->validate([
+            'note_category_id' => 'required',
+            'user_id' => 'required',
+            'reminder_date' => 'required',
+            'remind_about' => 'required',
+        ]);
 
-        return redirect()->route('rper.index');
+        Reminder::create($request->all());
+
+        return redirect()->route('reminder.create');
     }
 
     /**

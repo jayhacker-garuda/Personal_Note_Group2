@@ -40,9 +40,16 @@ class TodoController extends Controller
      */
     public function store(Request $request)
     {
-        Todo::create($request->validated());
+        $request->validate([
+            'note_category_id' => 'required',
+            'user_id' => 'required',
+            'todo_date' => 'required',
+            'todo' => 'required',
+        ]);
 
-        return redirect()->route('todo.index');
+        Todo::create($request->all());
+
+        return redirect()->route('todo.create');
     }
 
     /**

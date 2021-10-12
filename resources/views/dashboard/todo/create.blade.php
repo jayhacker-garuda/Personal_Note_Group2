@@ -9,8 +9,11 @@
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 bg-white border-b border-gray-200">
                 <form method="POST" action="{{ route('todo.store') }}">
+                    @csrf
                     <h1 class="text-xl text-center">ToDo</h1>
                     <br>
+                    <input type="hidden" name="note_category_id" value="">
+                    <input type="hidden" name="user_id" value="{{ Auth::id() }}">
                     <div class="mb-4">
                         <label class="text-xl text-gray-600">Date <span class="text-red-500">*</span></label></br>
                         <input type="date" class="border-2 border-gray-300 p-2 w-full" name="todo_date" id="todo_date" value="{{ old('todo_date') }}" required>
