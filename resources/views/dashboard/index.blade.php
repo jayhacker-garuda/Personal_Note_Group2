@@ -90,7 +90,7 @@
                                         <div class="xl:w-1/3 md:w-1/2 p-4">
                                         <div class="bg-white p-6 rounded-lg">
                                             <div class="flex justify-between">
-
+                                                
                                                 <div>
                                                         <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{ $tnote->todo_date }}
                                                         </h2>
@@ -130,7 +130,7 @@
                                         </div>
                                     </div>
                                     @empty
-
+                                        
                                     @endforelse
                                 </div>
                             </div>
@@ -273,10 +273,10 @@
 
                 {{-- {{-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> --}}
                 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-
-
-
-                <div class="">
+                <div class=" -mb-15" >
+                    <h1 class="sm:text-4xl text-5x font-bold title-font mb-2 text-gray-900">Profile</h1>
+                </div>
+                <div class="bg-gray-400 w-auto text-center text-white p-5">
                     <div class=" w-full text-white">
                         <div x-data="{ open: false }"
                             class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
@@ -298,11 +298,11 @@
                     </div>
                     <!-- End of Navbar -->
 
-                    <div class="container mx-auto my-5 p-5">
-                        <div class="md:flex no-wrap md:-mx-2 ">
-                            <!-- Left Side -->
-                            <div class="w-full md:w-3/12 md:mx-2">
-                                <!-- Profile Card -->
+                <div class="bg-black rounded-2xl w-9/12 container mx-auto my-5 p-5">
+                    <div class="md:flex no-wrap  md:-mx-2 ">
+                        <!-- Left Side -->
+                        <div class="w-full md:w-3/12 md:mx-2">
+                            <!-- Profile Card -->
 
                                 <form method="post" enctype="multipart/form-data" id="imageChanger"
                                     action="{{ route('profile') }}">
@@ -316,41 +316,40 @@
                                     </label>
                                 </form>
 
-                                <!-- End of profile card -->
-                                <div class="my-4"></div>
-                            </div>
-                            <!-- Right Side -->
-                            <div class="w-full md:w-9/12 mx-2 h-64">
-                                <!-- Profile tab -->
-                                <!-- About Section -->
-                                <div class="bg-white p-3 shadow-sm rounded-2xl mb-10">
-                                    <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
-                                        <span clas="text-green-500">
-                                            <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                            </svg>
-                                        </span>
-                                        <span class="tracking-wide">About</span>
-                                        <span>
-                                            <button onclick="switchDiv()" id="editBtn"
-                                                class="w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Edit</button>
-                                        </span>
-                                    </div>
-                                    <div class="text-gray-700">
-                                        <div id="editProfile" class="grid md:grid-cols-2 text-sm" style="display: none">
-                                            <form action="{{ route('dashboard.edit', Auth::user()->id) }}" method="POST">
-                                                @csrf
-                                                <div class="flex-row">
-                                                    <div class="flex-col">
-                                                        <div class="px-4 py-2">
-                                                            <input type="text" name="name" class="border form-input"
-                                                                placeholder="NAME">
-                                                            @error('name')
-                                                                <span>{{ $message }}</span>
-                                                            @enderror
-                                                        </div>
+                            <!-- End of profile card -->
+                            <div class="my-4"></div>
+                        </div>
+                        <!-- Right Side -->
+                        <div class="w-full md:w-9/12 mx-2 h-64">
+                            <!-- Profile tab -->
+                            <!-- About Section -->
+                            <div class="bg-white p-3 shadow-sm rounded-2xl mb-10">
+                                <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
+                                    <span clas="text-green-500">
+                                        <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                        </svg>
+                                    </span>
+                                    <span class="tracking-wide">About</span>
+                                    <span>
+                                        <button onclick="switchDiv()" id="editBtn"
+                                            class="w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Edit</button>
+                                    </span>
+                                </div>
+                                <div class="text-gray-700">
+                                    <div id="editProfile" class="grid md:grid-cols-2 text-sm" style="display: none">
+                                        <form action="{{ route('dashboard.edit', Auth::user()->id) }}" method="POST">
+                                            @csrf
+                                            <div class="flex-row">
+                                                <div class="flex-col">
+                                                    <div class="px-4 py-2">
+                                                        <input type="text" name="name" class="border form-input"
+                                                            placeholder="NAME">
+                                                        @error('name')
+                                                            <span>{{ $message }}</span>
+                                                        @enderror
                                                     </div>
                                                     <div class="flex-col">
                                                         <div class="px-4 py-2">
@@ -366,20 +365,20 @@
                                                         </div>
                                                     </div>
 
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div id="change" class="grid md:grid-cols-2 text-sm" style="display: block">
-                                            {{-- <div class="grid grid-cols-2"> --}}
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div id="change" class="grid md:grid-cols-2 text-sm" style="display: block">
+                                        {{-- <div class="grid grid-cols-2"> --}}
                                             <div class="px-4 py-2 font-semibold">Name:</div>
                                             <div class="px-4 py-2">{{ Auth::user()->name }}</div>
-                                            {{-- </div> --}}
-                                            <div class="text-gray-700">
-                                                <div class="grid md:grid-cols-2 text-sm">
-                                                    <div class="grid grid-cols-2">
-                                                        <div class="px-4 py-2 font-semibold">Email:</div>
-                                                        <div class="px-4 py-2">{{ Auth::user()->email }}</div>
-                                                    </div>
+                                        {{-- </div> --}}
+                                        <div class="text-gray-700">
+                                            <div class="grid md:grid-cols-2 text-sm">
+                                                <div class="grid grid-cols-2">
+                                                    <div class="px-4 py-2 font-semibold">Email:</div>
+                                                    <div class="px-4 py-2">{{ Auth::user()->email }}</div>
+                                                </div>
 
                                                 </div>
                                             </div>
@@ -405,13 +404,25 @@
     </div>
     <div id="settings" style="display: none">
         <!-- Settings Display -->
-        <h1 class="text-3xl font-bold">Settings</h1>
-        <div class="flex flex-col items-center justify-center mt-1/12 mb-2 overflow-hidden">
-            <h1 class="text-3xl text-center">Deactivate Button</h1>
-            <div class="w-2/6">
-                <a href="#"
-                    class="text-center bg-black hover:text-red-600 block w-full p-5 my-2 text-sm font-semibold text-white rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline  hover:shadow-xs">
-                    Deactivate</a>
+        <div class="bg-gray-600">
+            <h1 class="text-3xl font-bold">Settings</h1>
+            <div class="flex flex-wrap space-x-80 justify-center items-center">
+                    <div class="flex flex-col items-center justify-center mt-1/12 mb-2 overflow-hidden">
+                        <h1 class="text-3xl text-center font-bold">Deactivate Button</h1>
+                        <div class="w-4/6">
+                            <a href="#"
+                                class="text-center bg-black hover:text-red-600 block w-full p-5 my-2 text-sm font-semibold text-white rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline  hover:shadow-xs">
+                                Deactivate</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center mt-1/12 mb-2 overflow-hidden">
+                        <h1 class="text-3xl text-center font-bold">Contact Button</h1>
+                        <div class="w-4/6">
+                            <a href="#"
+                               class="text-center bg-black hover:text-red-600 block w-full p-5 my-2 text-sm font-semibold text-white rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline  hover:shadow-xs">
+                                Contact</a>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
