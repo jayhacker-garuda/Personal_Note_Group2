@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\NoteCategory;
 use App\Models\Personal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PersonalController extends Controller
 {
@@ -41,28 +42,24 @@ class PersonalController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate([
-            'note_category_id' => 'required',
-            'user_id' => 'required',
-            'title' => 'required',
-            'description' => 'required',
+        $request->validate([
+           'title' => 'required|min:4|string|unique:personals',
+            'description' => 'required|max:150|string',
+            'category_id' => 'required'
         ]);
-        dd($data);
 
-        // Personal::create($request->input());
+        // dd($request);
+        
+        Personal::create([
+            'user_id' => Auth::user()->id,
+            'title' => $request->title,
+            'description' => $request->description,
+            'note_category_id' => $request->category_id
+        ]);
 
-        $personal                   = new Personal();
-        $personal->note_category_id = $request->category_id;
-        $personal->user_id          = $request->user_id;
-        $personal->title            = $request->title;
-        $personal->description      = $request->description;
-        $personal->save();
+        
 
-        return $personal;
-      
-        return redirect()
-            ->route('personal.create')
-            ->with('message', 'Personal Noted Created!!!');
+        return redirect()->route('dashboard.index')->with('personal-note','.....');
     }
 
     /**

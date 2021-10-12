@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\NoteCategory;
 use App\Models\Reminder;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReminderController extends Controller
 {
@@ -28,7 +30,7 @@ class ReminderController extends Controller
      */
     public function create()
     {
-        return view('dashboard.reminder.create');
+        return view('dashboard.reminder.create')->with('noteCategory', NoteCategory::all());
     }
 
     /**
@@ -40,15 +42,23 @@ class ReminderController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'note_category_id' => 'required',
-            'user_id' => 'required',
-            'reminder_date' => 'required',
-            'remind_about' => 'required',
+            'reminder_date' => 'required|date',
+            'remind_about' => 'required|max:150|string',
+            'category_id' => 'required'
         ]);
 
-        Reminder::create($request->all());
+        // dd($request);
 
-        return redirect()->route('reminder.create');
+        Reminder::create([
+            'user_id' => Auth::user()->id,
+            'reminder_date' => $request->reminder_date,
+            'remind_about' => $request->remind_about,
+            'note_category_id' => $request->category_id
+        ]);
+
+
+
+        return redirect()->route('dashboard.index')->with('reminder-note', '.....');
     }
 
     /**

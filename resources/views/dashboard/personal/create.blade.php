@@ -20,24 +20,56 @@
                         <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
                         <div class="mb-4">
                             <label class="text-xl text-gray-600">Title</label></br>
-                            <input type="text" class="border-2 border-gray-300 p-2 w-full" name="title" id="title" value="" required>
+                            <input type="text" class="border-2 border-gray-300 p-2 w-full" name="title" id="title">
+
+                            @error('title')
+                                <div class="my-2 block text-sm text-left text-red-500 bg-opacity-20 border border-red-400 h-10 w-2/4 items-center p-4 rounded-md"
+                                    role="alert">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
 
                         <div class="mb-4">
                             <label class="text-xl text-gray-600">Description</label></br>
-                            <input type="text" class="border-2 border-gray-300 p-2 w-full" name="description" id="description" placeholder="">
+                            <input type="text" class="border-2 border-gray-300 p-2 w-full" name="description"
+                                id="description" placeholder="Description">
+                                @error('description')
+                                <span class="my-2 block text-sm text-left text-red-500 bg-opacity-20 border border-red-400 h-10 w-2/4 items-center p-4 rounded-md"
+                                    role="alert">
+                                    {{ $message }}
+                                </span>
+                            @enderror
                         </div>
 
 
                         <div class="flex p-1">
                             <select class="border-2 border-gray-300 border-r p-2" name="category_id">
                                 <option disabled selected>Note Permission</option>
+<<<<<<< HEAD
                                 @foreach ($noteCategory as $category )
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     
                                 @endforeach
                             </select>
                             <button type="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Submit</button>
+=======
+                                @foreach ($noteCategory as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+
+                                @endforeach
+                            </select>
+                            @error('category_id')
+                                <div class="my-2 block text-sm text-left text-red-500 bg-opacity-20 border border-red-400 h-10 w-2/4 items-center p-4 rounded-md"
+                                    role="alert">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <div class="mt-2">
+                            <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400"
+                            >Submit</button>
+>>>>>>> 332c309cef16869a5fc5b83b0c2700b4afab0c90
                         </div>
                     </form>
                 </div>
@@ -45,10 +77,21 @@
         </div>
     </div>
 
-    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+@endsection
+@section('js')
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js%22%3E"></script>
 
-    <script>
-        CKEDITOR.replace( 'content' );
-    </script>
-
+<script>
+    CKEDITOR.replace( 'content' );
+</script>
+    @if (session()->has('error'))
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'something went wrong',
+                text: '📝📝📝',
+                footer: '<a href="/contact-us">Why do I have this issue?</a>'
+            })
+        </script>
+    @endif
 @endsection

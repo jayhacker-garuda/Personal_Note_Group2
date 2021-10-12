@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\NoteCategory;
 use App\Models\Todo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TodoController extends Controller
 {
@@ -29,7 +31,7 @@ class TodoController extends Controller
      */
     public function create()
     {
-        return view('dashboard.todo.create');
+        return view('dashboard.todo.create')->with('noteCategory', NoteCategory::all());
     }
 
     /**
@@ -41,6 +43,7 @@ class TodoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+<<<<<<< HEAD
             'note_category_id' => 'required',
             'user_id' => 'required',
             'todo_date' => 'required',
@@ -50,6 +53,25 @@ class TodoController extends Controller
         Todo::create($request->all());
 
         return redirect()->route('todo.create');
+=======
+            'todo_date' => 'required|date',
+            'todo' => 'required|max:150|string',
+            'category_id' => 'required'
+        ]);
+
+        // dd($request);
+
+        Todo::create([
+            'user_id' => Auth::user()->id,
+            'todo_date' => $request->todo_date,
+            'todo' => $request->todo,
+            'note_category_id' => $request->category_id
+        ]);
+
+
+
+        return redirect()->route('dashboard.index')->with('todo-note', '.....');
+>>>>>>> 332c309cef16869a5fc5b83b0c2700b4afab0c90
     }
 
     /**
