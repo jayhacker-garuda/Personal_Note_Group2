@@ -16,16 +16,16 @@ class NoteCategory extends Model
 
     public function personal(){
         
-        return $this->belongsTo(Personal::class, 'note_category_id');
+        return $this->hasMany(Personal::class, 'note_category_id');
     }
     
     public function reminder(){
         
-        return $this->belongsTo(Personal::class, 'note_category_id');
+        return $this->hasMany(Personal::class, 'note_category_id');
     }
     
     public function todo(){
         
-        return $this->belongsTo(Personal::class, 'note_category_id');
+        return $this->hasMany(Personal::class, 'note_category_id');
     }
 }

@@ -43,11 +43,6 @@
                 </div>
             </div>
         </div>
-{{--        <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px" style="transform: translateZ(0px)">--}}
-{{--            <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">--}}
-{{--                <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>--}}
-{{--            </svg>--}}
-{{--        </div>--}}
     </div>
     <section class="pb-10 bg-gray-600 -mt-24">
         <div class="container mx-auto px-4">
@@ -55,13 +50,12 @@
                 <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
                     <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                         <div class="px-4 py-5 flex-auto">
-                            <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                                <i class="fas fa-award"></i>
+                            <div class="text-black p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-gray-200">
+                                <img class=" w-full h-full rounded-full shadow-outline-indigo transition-shadow duration-300" src="{{ url('/storage/media/'.$tNote->user->profile_picture) }}" alt="">
                             </div>
-                            <h6 class="text-xl font-semibold">Lorem ipsum dolor sit amet</h6>
-                            <p class="mt-2 mb-4 text-blueGray-500">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            <h6 class="text-xl font-semibold">{{ $tNote->todo }}</h6>
+                            <p class="mt-2 mb-4 text-blueGray-500 jus">
+                                {{ $tNote->created_at->DiffForHumans() }}
                             </p>
                         </div>
                     </div>
@@ -69,13 +63,12 @@
                 <div class="w-full md:w-4/12 px-4 text-center">
                     <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                         <div class="px-4 py-5 flex-auto">
-                            <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
-                                <i class="fas fa-retweet"></i>
+                            <div class="text-black p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-gray-200">
+                                <img class=" w-full h-full rounded-full shadow-outline-indigo transition-shadow duration-300" src="{{ url('/storage/media/'.$rNote->user->profile_picture) }}" alt="">
                             </div>
-                            <h6 class="text-xl font-semibold">Lorem ipsum dolor sit amet</h6>
-                            <p class="mt-2 mb-4 text-blueGray-500">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            <h6 class="text-xl font-semibold">{{ $rNote->remind_about }}</h6>
+                            <p class="mt-2 mb-4 text-blueGray-500 jus">
+                                {{ $rNote->created_at->DiffForHumans() }}
                             </p>
                         </div>
                     </div>
@@ -83,13 +76,15 @@
                 <div class="pt-6 w-full md:w-4/12 px-4 text-center">
                     <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                         <div class="px-4 py-5 flex-auto">
-                            <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
-                                <i class="fas fa-fingerprint"></i>
+                            <div class="text-black p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-gray-200">
+                                <img class=" w-full h-full rounded-full shadow-outline-indigo transition-shadow duration-300" src="{{ url('/storage/media/'.$pNote->user->profile_picture) }}" alt="">
                             </div>
-                            <h6 class="text-xl font-semibold">Lorem ipsum dolor sit amet</h6>
+                            <h6 class="text-xl font-semibold">{{ $pNote->title }}</h6>
                             <p class="mt-2 mb-4 text-blueGray-500 jus">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                {{ $pNote->description }}
+                            </p>
+                            <p class="mt-2 mb-4 text-blueGray-500 jus">
+                                {{ $pNote->created_at->DiffForHumans() }}
                             </p>
                         </div>
                     </div>
@@ -159,17 +154,7 @@
             </div>
             <div class="px-5 py-2">
                 <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Blog
-                </a>
-            </div>
-            <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
                     Team
-                </a>
-            </div>
-            <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Pricing
                 </a>
             </div>
             <div class="px-5 py-2">
@@ -216,7 +201,7 @@
             </a>
         </div>
         <p class="mt-8 text-base leading-6 text-center text-gray-400">
-            © 2021 SomeCompany, Inc. All rights reserved.
+            © 2021 AmberAcademy, Inc. All rights reserved.
         </p>
     </div>
 </section>

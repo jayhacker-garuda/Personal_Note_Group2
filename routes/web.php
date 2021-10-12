@@ -12,6 +12,7 @@ use App\Http\Controllers\ProfileController;
 
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\ReminderController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\TodoController;
 
 use Illuminate\Auth\Events\Login;
@@ -52,13 +53,17 @@ Route::middleware(['user_type'])->group(function () {
     Route::post('/admin/note-category/store', [AdminController::class, 'storeNoteCategory'])->name('admin.note-category.store');
 });
 
-// User Dashboard
-Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
-Route::POST('/ppUpdate', [ProfileController::class, 'ppUpdate'])->name('profile');
-Route::POST('/dashboard/{name}/edit/', [ProfileController::class, 'edit'])->name('dashboard.edit');
+
+Route::middleware(['note_user'])->group(function(){
 
 
+    // User Dashboard
+    Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
+    Route::post('/ppUpdate', [ProfileController::class, 'ppUpdate'])->name('profile');
+    Route::post('/dashboard/{name}/edit/', [ProfileController::class, 'edit'])->name('dashboard.edit');
 
+    
+});
 
 
 // Logout User
@@ -66,6 +71,10 @@ Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 
 // Todo, Reminder and Personal
-Route::resource('dashboard/personal', PersonalController::class,);
+Route::resource('dashboard/personal', PersonalController::class);
 Route::resource('dashboard/reminder', ReminderController::class);
 Route::resource('dashboard/todo', TodoController::class);
+
+// Contact Controller
+Route::get('/contact-us/create', [ContactController::class, 'get_contact'])->name('contact-us.create');
+Route::post('/contact-us/store', [ContactController::class, 'store_contact'])->name('contact-us.store');
