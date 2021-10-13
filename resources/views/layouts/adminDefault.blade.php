@@ -47,8 +47,8 @@
 
 
     
-    @yield('js')
-    <script src="{{ asset('js/jquery/jquery-3.6.0.js') }}"></script>
+<script src="{{ asset('js/jquery/jquery-3.6.0.js') }}"></script>
+@yield('js')
     <script src="{{ mix('js/app.js') }}"></script>
 </body>
 

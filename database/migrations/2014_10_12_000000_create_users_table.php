@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('profile_picture')->nullable();
             $table->string('email')->unique();
             $table->string('status')->nullable()->default('inactive');
+            $table->softDeletes();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

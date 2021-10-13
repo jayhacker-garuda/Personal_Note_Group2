@@ -47,23 +47,18 @@ Route::post('/admin/login', [AdminLoginController::class, 'loginAdmin'])->name('
 Route::middleware(['user_type'])->group(function () {
     // Admin Dashboard
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
-    
+    // get user data
+    Route::get('/fetch-user-data', [AdminController::class, 'fetchUserData'])->name('fetch.users');
+    Route::get('/admin/user/edit/{id}', [AdminController::class, 'fetchUserDataForEdit'])->name('edit.user');
+    Route::put('/admin/user/update/{id}', [AdminController::class, 'updateUserData'])->name('update.user');
+    Route::post('/admin/user/deactivate/{id}', [AdminController::class, 'deactivateUser'])->name('deactivate.user');
+    Route::get('/admin/fetch-deactivated/users', [AdminController::class, 'deactivatedUsers'])->name('deactivated.users');
+    Route::post('/admin/activate/user/{id}', [AdminController::class, 'activateUser'])->name('activate.user');
     // Create Note Category
     Route::get('/admin/note-category/create', [AdminController::class, 'createNoteCategory'])->name('admin.note-category.create');
     Route::post('/admin/note-category/store', [AdminController::class, 'storeNoteCategory'])->name('admin.note-category.store');
 });
 
-
-    // User Dashboard
-    Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
-    Route::post('/ppUpdate', [ProfileController::class, 'ppUpdate'])->name('profile');
-    Route::post('/dashboard/{name}/edit/', [ProfileController::class, 'edit'])->name('dashboard.edit');
-
-
-    // User Dashboard
-    Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
-    Route::post('/ppUpdate', [ProfileController::class, 'ppUpdate'])->name('profile');
-    Route::post('/dashboard/{name}/edit/', [ProfileController::class, 'edit'])->name('dashboard.edit');
 
 // User Dashboard
 Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
