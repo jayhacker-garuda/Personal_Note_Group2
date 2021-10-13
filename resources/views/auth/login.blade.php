@@ -5,16 +5,10 @@
 @endsection
 
 @section('content')
-    <div class="min-h-screen ">
-        <div class="bg-no-repeat bg-cover md:w-6/12 h-screen absolute" style="background-image: url('https://www.sysmex-ap.com/new-zealand/wp-content/uploads/sites/13/2020/05/Company-Press-Release.jpg  ')">
-        </div>
-        <div class="">
-
-
-            <div class="flex justify-end">
-
-
-            <div class=" bg-white min-h-screen md:w-6/12 sm:w-full flex justify-center items-center">
+    <div class="min-h-screen bg-no-repeat bg-cover bg-fixed"
+        style="background-image: url('https://www.sysmex-ap.com/new-zealand/wp-content/uploads/sites/13/2020/05/Company-Press-Release.jpg  ')">
+        <div class="flex justify-end">
+            <div class="bg-white min-h-screen w-1/2 flex justify-center items-center">
                 <div>
 
                     <form action="{{ route('auth.loginUser') }}" method="post">
@@ -56,7 +50,7 @@
                         <div class="">
                             <button class=" mt-4 mb-3 w-full bg-black
                            text-white py-4 rounded-md transition duration-100">Login now</button>
-
+                            
                         </div>
                     </form>
                     <p class="mt-2"> Dont have an account? <span class="cursor-pointer text-sm text-blue-600"> <a
