@@ -21,7 +21,7 @@
 
 <body class="bg-gradient-to-b from-gray-600 via-black to-white h-full antialiased leading-none font-sans">
     <div class="">
-    <div class="relative antialiased bg-black dark-mode:bg-gray-900 w-full">
+    <div class="relative antialiased z-10 bg-black dark-mode:bg-gray-900 w-full">
         <div class="w-full text-gray-700 bg-dark dark-mode:text-gray-200 dark-mode:bg-gray-800">
             <div x-data="{ open: true }"
                 class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
