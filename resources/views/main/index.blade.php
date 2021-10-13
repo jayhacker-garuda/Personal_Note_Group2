@@ -207,7 +207,7 @@
             </a>
         </div>
         <p class="mt-8 text-base leading-6 text-center text-gray-400">
-            © 2021 AmberAcademy, Inc. All rights reserved.
+            © 2021 AmberAcademy, Personal Note
         </p>
     </div>
 </section>
