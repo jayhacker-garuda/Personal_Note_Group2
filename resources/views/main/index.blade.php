@@ -60,7 +60,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                     <div class="w-full md:w-4/12 px-4 text-center">
                     <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                         <div class="px-4 py-5 flex-auto">
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="pt-6 w-full md:w-4/12 px-4 text-center">
                     <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                         <div class="px-4 py-5 flex-auto">
@@ -161,12 +161,12 @@
                 </a>
             </div>
             <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                <a href="{{ url('contact-us') }}" class="text-base leading-6 text-gray-500 hover:text-gray-900">
                     Contact
                 </a>
             </div>
             <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                <a href="{{ url('team') }}" class="text-base leading-6 text-gray-500 hover:text-gray-900">
                     Terms
                 </a>
             </div>

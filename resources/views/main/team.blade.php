@@ -37,7 +37,7 @@
 
             <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
                 <div class="mb-8">
-                    <img class="object-center object-cover rounded-full h-36 w-36" src="" alt="photo">
+                    <img class="object-center object-cover rounded-full h-36 w-36" src="{{ asset('storage/media/WhatsApp Image 2021-09-21 at 1.52.33 PM.jpeg') }}" alt="photo">
                 </div>
                 <div class="text-center">
                     <p class="text-xl text-gray-700 font-bold mb-2">Ezra Muir</p>
