@@ -53,6 +53,17 @@
                     <p class="text-base text-gray-400 font-normal">Css Designer</p>
                 </div>
             </div>
+
+            <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center opacity-0">
+                <div class="mb-8">
+                    <img class="object-center object-cover rounded-full h-36 w-36" src="{{ asset('image/img_6.png') }}">
+                </div>
+                <div class="text-center">
+                    <p class="text-xl text-gray-700 font-bold mb-2"></p>
+                    <p class="text-base text-gray-400 font-normal"></p>
+                </div>
+            </div>
+
             <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
                 <div class="mb-8">
                     <img class="object-center object-cover rounded-full h-36 w-36" src="{{ asset('image/img_3.png') }}" alt="photo">
@@ -62,6 +73,7 @@
                     <p class="text-base text-gray-400 font-normal">Graphic Designer</p>
                 </div>
             </div>
+
 
         </div>
     </section>
