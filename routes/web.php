@@ -62,6 +62,10 @@ Route::middleware(['user_type'])->group(function () {
 });
 
 
+    // User Dashboard
+    Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
+    Route::post('/ppUpdate', [ProfileController::class, 'ppUpdate'])->name('profile');
+    Route::post('/dashboard/{name}/edit/', [ProfileController::class, 'edit'])->name('dashboard.edit');
 
 
 
