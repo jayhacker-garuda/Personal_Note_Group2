@@ -118,9 +118,16 @@
                                                     </div>
                                                 </div>
                                             <p class="leading-relaxed text-base">{{ $tnote->todo }}</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            <div class="my-5 space-x-1.5 flex">
+                                                <a href="{{ route('todo.edit', $tnote->id) }}" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                
+                                                <form action="{{ route('todo.destroy', $tnote->id) }}" method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="p-2 py-2 bg-red-500 rounded text-black">
+                                                        Delete
+                                                    </button>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -180,8 +187,17 @@
                                                 </div>
                                                 <p class="leading-relaxed text-base">{{ $rnote->remind_about }}</p>
                                                 <div class="my-5 space-x-1.5">
-                                                    <a href="#" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                    <a href="#" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                                    <div class="my-5 space-x-1.5 flex">
+                                                        <a href="{{ route('reminder.edit', $rnote->id) }}" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                        
+                                                        <form action="{{ route('reminder.destroy', $rnote->id) }}" method="post">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button class="p-2 py-2 bg-red-500 rounded text-black">
+                                                                Delete
+                                                            </button>
+                                                        </form>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -233,9 +249,16 @@
                                                     </div>
                                                 </div>
                                                 <p class="leading-relaxed text-base">{{ $pnote->description }}</p>
-                                                <div class="my-5 space-x-1.5">
-                                                    <a href="#" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                    <a href="#" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                                <div class="my-5 space-x-1.5 flex">
+                                                    <a href="{{ route('personal.edit', $pnote->id) }}" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                    
+                                                    <form action="{{ route('personal.destroy', $pnote->id) }}" method="post">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="p-2 py-2 bg-red-500 rounded text-black">
+                                                            Delete
+                                                        </button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
