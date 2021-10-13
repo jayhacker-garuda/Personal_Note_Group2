@@ -5,10 +5,10 @@
 @endsection
 
 @section('content')
-    
-    <div class="h-full">
+
+    <div class="h-full" style="margin-top: -1.8px">
         <div class="py-2 flex">
-            <div class="p-2 space-x-1.5 mt-12">
+            <div class="p-2 space-x-1.5 ">
                 <a id="homeBtn" class="p-2 py-2 bg-white rounded cursor-pointer">
                     Home
                 </a>
@@ -85,7 +85,7 @@
                                         <div class="xl:w-1/3 md:w-1/2 p-4">
                                         <div class="bg-white p-6 rounded-lg">
                                             <div class="flex justify-between">
-                                                
+
                                                 <div>
                                                         <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{ $tnote->todo_date }}
                                                         </h2>
@@ -125,7 +125,7 @@
                                         </div>
                                     </div>
                                     @empty
-                                        
+
                                     @endforelse
                                 </div>
                             </div>
