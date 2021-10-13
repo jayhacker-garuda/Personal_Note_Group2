@@ -6,40 +6,8 @@
 
 @section('admin-panel')
     <div class="mt-6">
-        <h2 class="text-xl font-semibold text-gray-700 leading-tight">Users</h2>
-
-        <div class="mt-3 flex flex-col sm:flex-row">
-            <div class="flex">
-                <div class="relative">
-                    <select
-                        class="h-full rounded-r border-t sm:rounded-r-none sm:border-r-0 border-r border-b block appearance-none w-full bg-white border-gray-400 text-gray-700 py-2 px-4 pr-8 leading-tight focus:outline-none focus:border-l focus:border-r focus:bg-white focus:border-gray-500">
-                        <option value="all">All</option>
-                        <option class="active">Active</option>
-                        <option class="inactive">Inactive</option>
-                        <option class="suspended">Suspended</option>
-                    </select>
-
-                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-
-            <div class="block relative mt-2 sm:mt-0">
-                <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-                    <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current text-gray-500">
-                        <path
-                            d="M10 4a6 6 0 100 12 6 6 0 000-12zm-8 6a8 8 0 1114.32 4.906l5.387 5.387a1 1 0 01-1.414 1.414l-5.387-5.387A8 8 0 012 10z">
-                        </path>
-                    </svg>
-                </span>
-
-                <input placeholder="Search"
-                    class="appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none">
-            </div>
-        </div>
+        <div role="alert" id="success_message"></div>
+        <h2 class="text-xl font-semibold text-gray-700 leading-tight">All Users</h2>
 
         <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
             <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
@@ -63,68 +31,84 @@
                                 Action</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        @foreach ($users as $user)
+                    <tbody id="UsersTable">
                             <tr>
-                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                    <div class="flex items-center">
-                                        <div class="flex-shrink-0 w-10 h-10">
-                                            <img class="w-full h-full rounded-full"
-                                                src="{{ url('storage/media/' . $user->profile_picture) }}" alt="">
-                                        </div>
-
-                                        <div class="ml-3">
-                                            <p class="text-gray-900 whitespace-no-wrap">{{ $user->name }}</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                    <p class="text-gray-900 whitespace-no-wrap">{{ $user->user_type }}</p>
-                                </td>
-                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                    <p class="text-gray-900 whitespace-no-wrap">{{ $user->created_at->DiffForHumans() }}
-                                    </p>
-                                </td>
-                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                    <span
-                                        class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                                        <span aria-hidden=""
-                                            class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                                        <span class="relative">{{ $user->status }}</span>
-                                    </span>
-                                </td>
-                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                    <span
-                                        class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                                        <select
-                                            class="h-full rounded-r border-t sm:rounded-r-none sm:border-r-0 border-r border-b block appearance-none w-full bg-white border-gray-400 text-gray-700 py-2 px-4 pr-8 leading-tight focus:outline-none focus:border-l focus:border-r focus:bg-white focus:border-gray-500">
-                                            <option value="all">All</option>
-                                            <option class="activated">Activate</option>
-                                            <option class="deactivated">Deactivate</option>
-                                            <option class="suspended">Suspend</option>
-                                        </select>
-                                        {{-- <span aria-hidden="" class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                                        <span class="relative">Activo</span> --}}
-                                    </span>
-                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
-                        @endforeach
                       </tbody>
                     </table>
-                    {{ $users->links() }}
-                {{-- <div class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between">
-                    <span class="text-xs xs:text-sm text-gray-900">Showing 1 to 4 of 50 Entries</span>
-
-                    <div class="inline-flex mt-2 xs:mt-0">
-                        <button
-                            class="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-l">Prev</button>
-                        <button
-                            class="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-r">Next</button>
-                    </div>
-                </div> --}}
             </div>
         </div>
     </div>
+    <div class="mt-6">
+        <h2 class="text-xl font-semibold text-gray-700 leading-tight">Deactivated Users</h2>
+
+        <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+            <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
+                <table class="min-w-full leading-normal">
+                    <thead>
+                        <tr>
+                            <th
+                                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                User
+                            </th>
+                            
+                            <th
+                                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                Deactivated At
+                            </th>
+                            <th
+                                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                Action
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="notActive">
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- editUserModal -->
+
+          <section id="editUserModal" class="hidden text-blueGray-700 fixed z-10 inset-0 bg-black bg-transparent bg-opacity-75 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div class="container items-center px-5 py-12 lg:px-20">
+              <div class="flex flex-col w-full p-10 mx-auto my-6 transition duration-500 ease-in-out transform bg-white border rounded-lg lg:w-2/6 md:w-1/2 md:mt-0">
+                <div class="relative mt-4">
+                    <h3 id="user_name"></h3>
+                    <span id="active_status"></span>
+                </div>
+                <div class="relative">
+                    <input hidden type="text" id="edit_user_id">
+                </div>
+                <div class="relative mt-4">
+                  <label for="edit_user_name" class="text-base leading-7 text-blueGray-500">Name:</label>
+                  <input type="name" id="edit_user_name" class="w-full px-4 py-2 mt-2 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blue-300 focus:border-blue-500 focus:bg-gray-300 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
+                </div>
+                <div class="relative mt-4">
+                  <label for="edit_user_name" class="text-base leading-7 text-blueGray-500">Email:</label>
+                  <input type="email" id="edit_user_email" class="w-full px-4 py-2 mt-2 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blue-300 focus:border-blue-500 focus:bg-gray-300 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
+                </div>
+                <div class="inline-flex flex-wrap items-center justify-between ">
+                  <button data-bs-dismiss="modal" type="button" class="close-modal-edit w-full px-4 py-2 my-2 font-medium text-blue-300 transition duration-500 ease-in-out transform bg-blue-100 border-blueGray-100 rounded-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-blue-200 hover:text-blue-700">Close</button>
+                  <button type="button" class="update_status w-full px-4 py-2 my-2 font-medium text-blue-600 transition duration-500 ease-in-out transform bg-blue-100 border-blueGray-100 rounded-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-blue-200 hover:text-blue-900">Change Status</button>
+                </div>
+                <ul role="alert" id="updateForm_errList"></ul>
+                <p class="mx-auto mt-3 text-xs text-blueGray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, veritatis?</p>
+              </div>
+            </div>
+          </section>
+        
+    <!-- end editUserModal -->
 @endsection
 @section('css')
     <style>
@@ -148,6 +132,8 @@
     </style>
 @endsection
 @section('js')
+<script src="{{ asset('js/Admin/user-data.js') }}"></script>
+<script src="{{ asset('js/Admin/deactiveUser.js') }}"></script>
     <!-- AlpineJS -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <!-- Font Awesome -->
@@ -156,7 +142,6 @@
     <!-- ChartJS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
         integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
-
     @if (session()->has('success'))
         <script>
             Swal.fire({
