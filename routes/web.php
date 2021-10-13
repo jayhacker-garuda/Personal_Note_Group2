@@ -32,7 +32,6 @@ use Illuminate\Support\Facades\Route;
 
 // Main Routes no Auth
 Route::get('/', [MainController::class, 'index'])->name('main.index');
-Route::get('/contact-us', [MainController::class, 'contact'])->name('main.contact');
 Route::get('/team', [MainController::class, 'team'])->name('main.team');
 
 // Auth
