@@ -8,9 +8,6 @@
     <div style="">
     <section class="max-w-6xl  mx-auto px-4 sm:px-6 lg:px-4 py-12">
         <div class="text-center pb-12">
-{{--            <h2 class="text-base font-bold text-indigo-600">--}}
-{{--                We have the best equipment--}}
-{{--            </h2>--}}
             <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-white">
                 Check our awesome team members
             </h1>
