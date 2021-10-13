@@ -50,7 +50,7 @@
                         <div class="">
                             <button class=" mt-4 mb-3 w-full bg-black
                            text-white py-4 rounded-md transition duration-100">Login now</button>
-                            
+
                         </div>
                     </form>
                     <p class="mt-2"> Dont have an account? <span class="cursor-pointer text-sm text-blue-600"> <a
