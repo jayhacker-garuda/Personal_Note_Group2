@@ -15,7 +15,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
                 <div class="mb-8">
-                    <img class="object-center object-cover rounded-full h-36 w-36" src="{{ asset('/storage/media/202206166_645561456360528_6335631248041693254_n.jpg') }}" alt="photo">
+                    <img class="object-center object-cover rounded-full h-36 w-36" src="{{ url('/storage/images/202206166_645561456360528_6335631248041693254_n.jpg') }}" alt="photo">
                 </div>
                 <div class="text-center">
                     <p class="text-xl text-gray-700 font-bold mb-2">Shamar Stewart</p>
@@ -24,7 +24,7 @@
             </div>
             <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
                 <div class="mb-8">
-                    <img class="object-center object-cover rounded-full h-36 w-36" src="{{ asset('storage/media/Screenshot 2021-10-12 105100.png') }}" alt="photo">
+                    <img class="object-center object-cover rounded-full h-36 w-36" src="{{ url('storage/images/Screenshot 2021-10-12 105100.png') }}" alt="photo">
                 </div>
                 <div class="text-center">
                     <p class="text-xl text-gray-700 font-bold mb-2">Ricardo Hibbert</p>
@@ -34,7 +34,7 @@
 
             <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
                 <div class="mb-8">
-                    <img class="object-center object-cover rounded-full h-36 w-36" src="{{ asset('storage/media/WhatsApp Image 2021-10-12 at 3.43.56 PM.jpeg') }}" alt="photo">
+                    <img class="object-center object-cover rounded-full h-36 w-36" src="{{ url('storage/images/WhatsApp Image 2021-10-12 at 3.43.56 PM.jpeg') }}" alt="photo">
                 </div>
                 <div class="text-center">
                     <p class="text-xl text-gray-700 font-bold mb-2">Ezra Muir</p>
@@ -43,7 +43,7 @@
             </div>
             <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
                 <div class="mb-8">
-                    <img class="object-center object-cover rounded-full h-36 w-36" src="{{ asset('storage/media/IMG-20210526-WA0012.jpg') }}" alt="photo">
+                    <img class="object-center object-cover rounded-full h-36 w-36" src="{{ url('storage/images/IMG-20210526-WA0012.jpg') }}" alt="photo">
                 </div>
                 <div class="text-center">
                     <p class="text-xl text-gray-700 font-bold mb-2">Rojae Henry</p>
@@ -52,7 +52,7 @@
             </div>
             <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
                 <div class="mb-8">
-                    <img class="object-center object-cover rounded-full h-36 w-36" src="{{ asset('storage/media/1580290178565.png') }}" alt="photo">
+                    <img class="object-center object-cover rounded-full h-36 w-36" src="{{ url('storage/images/1580290178565.png') }}" alt="photo">
                 </div>
                 <div class="text-center">
                     <p class="text-xl text-gray-700 font-bold mb-2">Showayne Adnderson</p>
