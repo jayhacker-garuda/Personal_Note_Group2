@@ -81,6 +81,7 @@ class TodoController extends Controller
      */
     public function edit(Todo $todo)
     {
+
         return view('dashboard.reminder.edit', compact('todo'));
     }
 
@@ -104,6 +105,7 @@ class TodoController extends Controller
      */
     public function destroy(Todo $todo)
     {
+
         $todo->delete();
 
         return redirect()->route('dashboard.index');
