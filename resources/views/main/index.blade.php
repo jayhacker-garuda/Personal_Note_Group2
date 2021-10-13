@@ -51,7 +51,7 @@
                     <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                         <div class="px-4 py-5 flex-auto">
                             <div class="text-black p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-gray-200">
-                                <img class=" w-full h-full rounded-full shadow-outline-indigo transition-shadow duration-300" src="{{ url('/storage/media/'.$tNote->user->profile_picture) }}" alt="">
+                                <img class=" w-full h-full rounded-full shadow-outline-indigo transition-shadow duration-300 " src="{{ url('/storage/media/'.$tNote->user->profile_picture) }}" alt="">
                             </div>
                             <h6 class="text-xl font-semibold">{{ $tNote->todo }}</h6>
                             <p class="mt-2 mb-4 text-blueGray-500 jus">
@@ -156,7 +156,7 @@
                 </a>
             </div>
             <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                <a href="{{ url('team') }}" class="text-base leading-6 text-gray-500 hover:text-gray-900">
                     Team
                 </a>
             </div>
@@ -166,7 +166,7 @@
                 </a>
             </div>
             <div class="px-5 py-2">
-                <a href="{{ url('team') }}" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                <a href="" class="text-base leading-6 text-gray-500 hover:text-gray-900">
                     Terms
                 </a>
             </div>
@@ -204,7 +204,7 @@
             </a>
         </div>
         <p class="mt-8 text-base leading-6 text-center text-gray-400">
-            © 2021 AmberAcademy, Inc. All rights reserved.
+            © 2021 AmberAcademy, Personal Note
         </p>
     </div>
 </section>
