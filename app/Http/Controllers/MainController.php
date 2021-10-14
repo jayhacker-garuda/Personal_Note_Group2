@@ -8,12 +8,16 @@ class MainController extends Controller
 {
     public function index()
     {
-        
+
         return view('main.index');
     }
 
     public function contact()
     {
         return view('main.contact');
+    }
+    public function team()
+    {
+        return view('main.team');
     }
 }
