@@ -23,25 +23,25 @@
         <div class="bg-gray-400">
             <div class="flex items-center  justify-center  h-screen mb-5 overflow-hidden bg-center bg-cover"
                 style="margin-top: -3.5%; background-image: url(https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80)">
-                <div class=" p-8 text-2xl text-white bg-black bg-opacity-25 rounded-xl" style="margin-top: -2%">
+                <div class=" p-8 text-2xl text-white bg-white bg-opacity-25 rounded-xl" style="margin-top: -2%">
                     <div class="text-center">
-                        <h1 class="text-white text-6xl font-bold">Welcome To Personal Notes</h1>
+                        <h1 class="text-black text-6xl font-bold">Welcome To Personal Notes</h1>
                         <div class="my-3"></div>
-                        <h2 class="text-white text-5xl font-bold">{{ Auth::user()->name }}</h2>
+                        <h2 class="text-black text-5xl font-bold">{{ Auth::user()->name }}</h2>
                     </div>
                 </div>
             </div>
             <div class="flex flex-wrap mb-20 items-center justify-center" style="margin-top: -14%">
-                <div
-                    class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
-                     <h1>View others post</h1>
-                    <div class="my-5"></div>
-                    <a href="" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">view</a>
-                </div>
+{{--                <div--}}
+{{--                    class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">--}}
+{{--                     <h1>View others post</h1>--}}
+{{--                    <div class="my-5"></div>--}}
+{{--                    <a href="" class="bg-white rounded text-black p-3 w-3/12 mt-4 px-3 py-2">view</a>--}}
+{{--                </div>--}}
                 <div class="mx-10"></div>
                 <div
                     class="py-5 rounded-2xl bg-gradient-to-r from-gray-600 via-black to-gray-600 w-auto text-center text-white p-8 ">
-                    <h1>Create a Personal</h1>
+                    <h1 class=" font-bold">Create a Personal</h1>
                     <div class="my-5"></div>
                     {{-- <a href="{{ url('dashboard/personal/create') }}" --}}
                     <a href="{{ route('personal.create') }}"
@@ -119,8 +119,8 @@
                                                 </div>
                                             <p class="leading-relaxed text-base">{{ $tnote->todo }}</p>
                                             <div class="my-5 space-x-1.5 flex">
-                                                <a href="{{ route('todo.edit', $tnote->id) }}" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                
+                                                <a href="#" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+
                                                 <form action="{{ route('todo.destroy', $tnote->id) }}" method="post">
                                                     @csrf
                                                     @method('DELETE')
@@ -132,7 +132,15 @@
                                         </div>
                                     </div>
                                     @empty
-
+                                        <div class="flex  items-center  justify-center mx-auto my-1/12 overflow-hidden ">
+                                            <div class=" p-8 text-2xl text-white bg-black bg-opacity-25 rounded-xl">
+                                                <div class="text-center">
+                                                    <h1 class="text-white text-6xl font-bold">No ToDo Note</h1>
+                                                    <div class="my-3"></div>
+                                                    <h2 class="text-white text-5xl font-bold"></h2>
+                                                </div>
+                                            </div>
+                                        </div>
                                     @endforelse
                                 </div>
                             </div>
@@ -188,8 +196,8 @@
                                                 <p class="leading-relaxed text-base">{{ $rnote->remind_about }}</p>
                                                 <div class="my-5 space-x-1.5">
                                                     <div class="my-5 space-x-1.5 flex">
-                                                        <a href="{{ route('reminder.edit', $rnote->id) }}" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                        
+                                                        <a href="#" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+
                                                         <form action="{{ route('reminder.destroy', $rnote->id) }}" method="post">
                                                             @csrf
                                                             @method('DELETE')
@@ -201,6 +209,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                     @endforeach
                                 </div>
                             </div>
@@ -250,8 +259,8 @@
                                                 </div>
                                                 <p class="leading-relaxed text-base">{{ $pnote->description }}</p>
                                                 <div class="my-5 space-x-1.5 flex">
-                                                    <a href="{{ route('personal.edit', $pnote->id) }}" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                    
+                                                    <a href="#" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+
                                                     <form action="{{ route('personal.destroy', $pnote->id) }}" method="post">
                                                         @csrf
                                                         @method('DELETE')
@@ -428,7 +437,7 @@
     <div id="settings" style="display: none">
         <!-- Settings Display -->
         <div class="bg-gray-600">
-            <h1 class="text-3xl font-bold">Settings</h1>
+            <h1 class="text-3xl font-bold -mt-6">Settings</h1>
             <div class="flex flex-wrap space-x-80 justify-center items-center">
                     <div class="flex flex-col items-center justify-center mt-1/12 mb-2 overflow-hidden">
                         <h1 class="text-3xl text-center font-bold">Deactivate Button</h1>
