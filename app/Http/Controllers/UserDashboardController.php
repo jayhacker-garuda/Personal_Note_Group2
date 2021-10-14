@@ -18,7 +18,7 @@ class UserDashboardController extends Controller
     {
         $personalNote = Personal::where('user_id', Auth::user()->id)->get();
         $reminderNote = Reminder::where('user_id', Auth::user()->id)->get();
-        $todoNote = Todo::where('user_id', Auth::user()->id)->get();
+        $todoNote     = Todo::where('user_id', Auth::user()->id)->get();
 
         
         return view('dashboard.index')

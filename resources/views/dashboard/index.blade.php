@@ -5,10 +5,10 @@
 @endsection
 
 @section('content')
-    
-    <div class="h-full">
+
+    <div class="h-full" style="margin-top: -1.8px">
         <div class="py-2 flex">
-            <div class="p-2 space-x-1.5 mt-12">
+            <div class="p-2 space-x-1.5 ">
                 <a id="homeBtn" class="p-2 py-2 bg-white rounded cursor-pointer">
                     Home
                 </a>
@@ -85,7 +85,7 @@
                                         <div class="xl:w-1/3 md:w-1/2 p-4">
                                         <div class="bg-white p-6 rounded-lg">
                                             <div class="flex justify-between">
-                                                
+
                                                 <div>
                                                         <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{ $tnote->todo_date }}
                                                         </h2>
@@ -118,14 +118,21 @@
                                                     </div>
                                                 </div>
                                             <p class="leading-relaxed text-base">{{ $tnote->todo }}</p>
-                                            <div class="my-5 space-x-1.5">
-                                                <a href="" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                <a href="" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                            <div class="my-5 space-x-1.5 flex">
+                                                <a href="{{ route('todo.edit', $tnote->id) }}" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                
+                                                <form action="{{ route('todo.destroy', $tnote->id) }}" method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="p-2 py-2 bg-red-500 rounded text-black">
+                                                        Delete
+                                                    </button>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
                                     @empty
-                                        
+
                                     @endforelse
                                 </div>
                             </div>
@@ -180,8 +187,17 @@
                                                 </div>
                                                 <p class="leading-relaxed text-base">{{ $rnote->remind_about }}</p>
                                                 <div class="my-5 space-x-1.5">
-                                                    <a href="#" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                    <a href="#" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                                    <div class="my-5 space-x-1.5 flex">
+                                                        <a href="{{ route('reminder.edit', $rnote->id) }}" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                        
+                                                        <form action="{{ route('reminder.destroy', $rnote->id) }}" method="post">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button class="p-2 py-2 bg-red-500 rounded text-black">
+                                                                Delete
+                                                            </button>
+                                                        </form>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -233,9 +249,16 @@
                                                     </div>
                                                 </div>
                                                 <p class="leading-relaxed text-base">{{ $pnote->description }}</p>
-                                                <div class="my-5 space-x-1.5">
-                                                    <a href="#" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
-                                                    <a href="#" class="p-2 py-2 bg-red-500 rounded text-black">Delete</a>
+                                                <div class="my-5 space-x-1.5 flex">
+                                                    <a href="{{ route('personal.edit', $pnote->id) }}" class="p-2 py-2 bg-green-500 rounded text-black">Edit</a>
+                                                    
+                                                    <form action="{{ route('personal.destroy', $pnote->id) }}" method="post">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="p-2 py-2 bg-red-500 rounded text-black">
+                                                            Delete
+                                                        </button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -305,9 +328,13 @@
                                     <label>
                                         <input name="profilePicture" class="hidden" id="file" type="file"
                                             {{-- onchange="changeImage(event)" --}} />
-                                        <img id="output"
+                                        @if (Auth::user()->profile_picture)
+                                            <img id="output"
                                             src="{{ url('/storage/media/' . Auth::user()->profile_picture) }}"
                                             class="mb-20 h-56 w-56 object-cover rounded-full">
+                                        @else
+                                            <img class="mb-20 h-56 w-56 object-cover rounded-full" src="{{ url('/storage/images/default-image.png') }}" id="output">
+                                        @endif
                                     </label>
                                 </form>
 
