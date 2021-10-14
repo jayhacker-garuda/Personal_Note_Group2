@@ -328,9 +328,13 @@
                                     <label>
                                         <input name="profilePicture" class="hidden" id="file" type="file"
                                             {{-- onchange="changeImage(event)" --}} />
-                                        <img id="output"
+                                        @if (Auth::user()->profile_picture)
+                                            <img id="output"
                                             src="{{ url('/storage/media/' . Auth::user()->profile_picture) }}"
                                             class="mb-20 h-56 w-56 object-cover rounded-full">
+                                        @else
+                                            <img class="mb-20 h-56 w-56 object-cover rounded-full" src="{{ url('/storage/images/default-image.png') }}" id="output">
+                                        @endif
                                     </label>
                                 </form>
 

@@ -34,11 +34,12 @@ class LoginController extends Controller
                 return redirect()->route('dashboard.index')->with('success', '.....');
                 
             }elseif (Auth::user()->status === 'deactivated') {
+                Auth::logout();
                 
                 return redirect()->route('login')->with('error', '❌❌❌');
                 
             } else {
-                
+                Auth::logout();
                 return redirect()->route('login')->with('error', '❌❌❌');
                 
             }
