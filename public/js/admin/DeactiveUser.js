@@ -44,7 +44,7 @@ $(document).ready(function () {
     }
 
     $(document).on('click', '.activate_user', (e) => {
-
+        e.preventDefault();
         let user_id = e.target.value;
 
         $.ajax({
@@ -53,7 +53,7 @@ $(document).ready(function () {
             headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
             success: function (response) {
 
-
+                // alert(response.message);
                 if (response.status == 404) {
 
                     $('#success_message').html("");
