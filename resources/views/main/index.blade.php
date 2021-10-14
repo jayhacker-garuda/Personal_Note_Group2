@@ -49,7 +49,7 @@
                 @if($tNote != null AND $pNote != null AND $rNote != null)
                     <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
                         <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                        <h2>Todo Note</h2>
+                        <h2 class="font-bold text-2xl">Todo Note</h2>
                         <div class="px-4 py-5 flex-auto">
                             <div class="text-black p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-gray-200">
                                 <img class=" w-full h-full rounded-full shadow-outline-indigo transition-shadow duration-300 " src="{{ url('/storage/media/'.$tNote->user->profile_picture) }}" alt="">
@@ -64,7 +64,7 @@
 
                     <div class="w-full md:w-4/12 px-4 text-center">
                     <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                        <h2>Remember Note</h2>
+                        <h2 class="font-bold text-2xl">Remember Note</h2>
                         <div class="px-4 py-5 flex-auto">
                             <div class="text-black p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-gray-200">
                                 <img class=" w-full h-full rounded-full shadow-outline-indigo transition-shadow duration-300" src="{{ url('/storage/media/'.$rNote->user->profile_picture) }}" alt="">
@@ -79,7 +79,7 @@
 
                 <div class="pt-6 w-full md:w-4/12 px-4 text-center">
                     <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                        <h2>Personal Note</h2>
+                        <h2 class="font-bold text-2xl">Personal Note</h2>
                         <div class="px-4 py-5 flex-auto">
                             <div class="text-black p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-gray-200">
                                 <img class=" w-full h-full rounded-full shadow-outline-indigo transition-shadow duration-300" src="{{ url('/storage/media/'.$pNote->user->profile_picture) }}" alt="">
