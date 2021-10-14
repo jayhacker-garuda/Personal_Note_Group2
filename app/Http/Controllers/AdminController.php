@@ -123,10 +123,29 @@ class AdminController extends Controller
         }
     }
 
-    // public function activateUser()
-    // {
+    public function activateUser($id)
+    {
+        $users = User::withTrashed();
+        // return response()->json(['message' => $user]);
         
-    // }
+
+        if ($users) {
+
+            $users->find($id)->restore();
+            return response()->json([
+                'status' => 200,
+                'message' => 'User activated' 
+            ]);
+            
+        } else {
+
+            return response([
+                'status' => 404,
+                'message' => 'User Not Found',
+            ]);
+        }
+    }
+    
     public function createNoteCategory()
     {
         return view('admin.noteCategory.create');
